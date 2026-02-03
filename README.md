@@ -6,7 +6,7 @@
 <img src="./assets/img/foto.jpg" alt="foto" width="200" />
 
 ## Lista de Resultados
-
+- [TPC 1](./TPC1/)
 
 ___
 

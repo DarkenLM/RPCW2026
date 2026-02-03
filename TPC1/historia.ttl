@@ -1,0 +1,218 @@
+@prefix : <http://rpcw.di.uminho.pt/historia/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rpcw.di.uminho.pt/historia/> .
+
+<http://rpcw.di.uminho.pt/historia> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/historia/amigoDe
+:amigoDe rdf:type owl:ObjectProperty ,
+                  owl:SymmetricProperty ,
+                  owl:IrreflexiveProperty .
+
+
+###  http://rpcw.di.uminho.pt/historia/aprendeLíngua
+:aprendeLíngua rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/historia/docenteDe
+:docenteDe rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/historia/estudaEm
+:estudaEm rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/historia/falaLíngua
+:falaLíngua rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/historia/frequentaCurso
+:frequentaCurso rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/historia/lecionaCurso
+:lecionaCurso rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/historia/naturalDe
+:naturalDe rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/historia/oriundoDe
+:oriundoDe rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw.di.uminho.pt/historia/pertenceA
+:pertenceA rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/historia/lecionadoEm
+:lecionadoEm rdf:type owl:DatatypeProperty .
+
+
+###  http://rpcw.di.uminho.pt/historia/temHorario
+:temHorario rdf:type owl:DatatypeProperty .
+
+
+###  http://rpcw.di.uminho.pt/historia/temIdade
+:temIdade rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://rpcw.di.uminho.pt/historia/Cidade
+:Cidade rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/historia/Curso
+:Curso rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/historia/Faculdade
+:Faculdade rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/historia/Instituição
+:Instituição rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/historia/Língua
+:Língua rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/historia/País
+:País rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/historia/Pessoa
+:Pessoa rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://rpcw.di.uminho.pt/historia/Alemanha
+:Alemanha rdf:type owl:NamedIndividual ,
+                   :País .
+
+
+###  http://rpcw.di.uminho.pt/historia/Alemão
+:Alemão rdf:type owl:NamedIndividual ,
+                 :Língua .
+
+
+###  http://rpcw.di.uminho.pt/historia/Ana
+:Ana rdf:type owl:NamedIndividual ,
+              :Pessoa ;
+     :amigoDe :Carlos ,
+              :Eduardo ;
+     :estudaEm :Universidade_do_Minho ;
+     :frequentaCurso :Curso_de_Alemão ;
+     :naturalDe :Portugal .
+
+
+###  http://rpcw.di.uminho.pt/historia/Carlos
+:Carlos rdf:type owl:NamedIndividual ,
+                 :Pessoa ;
+        :amigoDe :Eduardo ;
+        :estudaEm :Universidade_do_Minho ;
+        :frequentaCurso :Curso_de_Alemão ;
+        :naturalDe :Portugal .
+
+
+###  http://rpcw.di.uminho.pt/historia/Curso_de_Alemão
+:Curso_de_Alemão rdf:type owl:NamedIndividual ,
+                          :Curso ;
+                 :lecionadoEm "Centro de Línguas" ;
+                 :temHorario "Sexta-Feira" .
+
+
+###  http://rpcw.di.uminho.pt/historia/Curso_de_Biotecnologia
+:Curso_de_Biotecnologia rdf:type owl:NamedIndividual ,
+                                 :Curso .
+
+
+###  http://rpcw.di.uminho.pt/historia/Eduardo
+:Eduardo rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :estudaEm :Universidade_do_Minho ;
+         :falaLíngua :Espanhol ,
+                     :Inglês ,
+                     :Português ;
+         :frequentaCurso :Curso_de_Alemão ;
+         :naturalDe :Portugal ;
+         :oriundoDe :Porto ;
+         :temIdade 21 .
+
+
+###  http://rpcw.di.uminho.pt/historia/Escola_de_Letras_Artes_e_Ciências_Humanas
+:Escola_de_Letras_Artes_e_Ciências_Humanas rdf:type owl:NamedIndividual ,
+                                                    :Faculdade ;
+                                           :pertenceA :Universidade_do_Minho .
+
+
+###  http://rpcw.di.uminho.pt/historia/Espanhol
+:Espanhol rdf:type owl:NamedIndividual ,
+                   :Língua .
+
+
+###  http://rpcw.di.uminho.pt/historia/Hanna
+:Hanna rdf:type owl:NamedIndividual ,
+                :Pessoa ;
+       :amigoDe :Eduardo ;
+       :estudaEm :Universidade_do_Minho ;
+       :falaLíngua :Alemão ,
+                   :Português ;
+       :frequentaCurso :Curso_de_Biotecnologia ;
+       :naturalDe :Alemanha .
+
+
+###  http://rpcw.di.uminho.pt/historia/Helmut_Ratz
+:Helmut_Ratz rdf:type owl:NamedIndividual ,
+                      :Pessoa ;
+             :docenteDe :Escola_de_Letras_Artes_e_Ciências_Humanas ;
+             :lecionaCurso :Curso_de_Alemão ;
+             :naturalDe :Alemanha .
+
+
+###  http://rpcw.di.uminho.pt/historia/Inglês
+:Inglês rdf:type owl:NamedIndividual ,
+                 :Língua .
+
+
+###  http://rpcw.di.uminho.pt/historia/Porto
+:Porto rdf:type owl:NamedIndividual ,
+                :Cidade .
+
+
+###  http://rpcw.di.uminho.pt/historia/Portugal
+:Portugal rdf:type owl:NamedIndividual ,
+                   :País .
+
+
+###  http://rpcw.di.uminho.pt/historia/Português
+:Português rdf:type owl:NamedIndividual ,
+                    :Língua .
+
+
+###  http://rpcw.di.uminho.pt/historia/Universidade_do_Minho
+:Universidade_do_Minho rdf:type owl:NamedIndividual ,
+                                :Instituição .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
