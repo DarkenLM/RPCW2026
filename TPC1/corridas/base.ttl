@@ -1,0 +1,53 @@
+@prefix : <http://rpcw.di.uminho.pt/corridas/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rpcw.di.uminho.pt/corridas/> .
+
+<http://rpcw.di.uminho.pt/corridas> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/corridas#viveEm
+:viveEm rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/corridas#hobby
+:hobby rdf:type owl:DatatypeProperty .
+
+
+###  http://rpcw.di.uminho.pt/corridas#número
+:número rdf:type owl:DatatypeProperty .
+
+
+###  http://rpcw.di.uminho.pt/corridas#idade
+:idade rdf:type owl:DatatypeProperty .
+
+
+###  http://rpcw.di.uminho.pt/corridas#nome
+:nome rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://rpcw.di.uminho.pt/corridas#tshirt
+:tshirt rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://rpcw.di.uminho.pt/corridas#Estado
+:Estado rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/corridas#Pessoa
+:Pessoa rdf:type owl:Class .

@@ -1,0 +1,42 @@
+[
+    {
+        "tshirt": "azul",
+        "nome": "Edgar",
+        "idade": 34,
+        "número": "708",
+        "estado": "Bahia",
+        "hobby": "ler"
+    },
+    {
+        "tshirt": "amarela",
+        "nome": "Paulo",
+        "idade": 25,
+        "número": "963",
+        "estado": "Paraná",
+        "hobby": "cantar"
+    },
+    {
+        "tshirt": "vermelha",
+        "nome": "Tiago",
+        "idade": 39,
+        "número": "899",
+        "estado": "Minas Gerais",
+        "hobby": "pintar"
+    },
+    {
+        "tshirt": "branca",
+        "nome": "Lúcio",
+        "idade": 41,
+        "número": "612",
+        "estado": "Rio de Janeiro",
+        "hobby": "dançar"
+    },
+    {
+        "tshirt": "verde",
+        "nome": "Moacir",
+        "idade": 28,
+        "número": "455",
+        "estado": "São Paulo",
+        "hobby": "desenhar"
+    }
+]

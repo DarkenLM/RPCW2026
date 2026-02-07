@@ -1,0 +1,12 @@
+# TPC{{ tpcNum }}
+**Titulo:** {{ title }}  
+**Id:** {{ authorId }}  
+**Nome:** {{ authorName }}  
+**Data:** {{ date }}  
+<img src="{{ authorPhoto }}" alt="foto" width="200" />
+
+## Resumo
+{{ summary }}
+
+## Resultados
+{{ results }}

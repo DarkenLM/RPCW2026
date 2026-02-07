@@ -1,0 +1,49 @@
+{
+    "authorName": "Rafael Santos Fernandes",
+    "authorId": "PG60298",
+    "authorPhoto": "../assets/img/foto.jpg",
+
+    "tpcNum": 1,
+    "title": "Semana 1",
+    "summary": "Este trabalho incidiu sobre o conceito de Ontologia, a sua definição, e como extraír e representar o conhecimento de uma história para uma ontologia. Foi também explorados os formatos de representação de ontologias OWL e Turtle, e como gerar ontologias nos mesmos a partir de um dataset.",
+    "results": {
+        "Manifesto": [
+            {
+                "file": "./manifest/makeManifest.py",
+                "desc": "Ferramenta de geração de manifestos a partir de um template e configuração."
+            },
+            {
+                "file": "./manifest/manifest.template",
+                "desc": "Template de manifesto utilizador por defeito."
+            },
+            {
+                "file": "./manifest/make",
+                "desc": "Bootstrap para a ferramenta de geração de manifestos."
+            }
+        ],
+        "História": [
+            {
+                "file": "./historia/historia.ttl",
+                "desc": "Ontologia que representa o conhecimento extraído do exercício 'Vamos extrair conhecimento de uma história'."
+            }
+        ],
+        "Corridas": [
+            {
+                "file": "./corridas/corridas.json",
+                "desc": "Dataset para o exercício 'Geração de uma ontologia a partir de um dataset em JSON'."
+            },
+            {
+                "file": "./corridas/base.ttl",
+                "desc": "Ontologia parcial que representam as classes e propriedades a utilizar na ontologia."
+            },
+            {
+                "file": "./corridas/corridas.ttl",
+                "desc": "Ontologia que representa o conhecimento extraído do dataset."
+            },
+            {
+                "file": "./corridas/json2ttl.py",
+                "desc": "Script para transformar o dataset numa ontologia."
+            }
+        ]
+    }
+}
