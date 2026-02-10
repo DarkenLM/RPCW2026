@@ -1,0 +1,17 @@
+{
+    "authorName": "Rafael Santos Fernandes",
+    "authorId": "PG60298",
+    "authorPhoto": "../assets/img/foto.jpg",
+
+    "tpcNum": 2,
+    "title": "Semana 2",
+    "summary": "Este trabalho incidiu sobre especificação de propriedades (propriedades funcionais, inversamente funcionais e transitivas), classificação automática, restrições de cardinalidade, restrições universais, condições necessárias e suficientes, e axiomas de cobertura.",
+    "results": {
+        "Cinema": [
+            {
+                "file": "./cinema.ttl",
+                "desc": "Ontologia que representa o conhecimento como especificado no primeiro exercicio. Como segundo exercício, onde deveria ser representado o conhecimento de um filme á escolha, do mesmo modo como no exercício anterior, foi representado o filme Interstellar, realizado por Christopher Nolan, escrito pelo mesmo e por Jonathan Nolan."
+            }
+        ]
+    }
+}
