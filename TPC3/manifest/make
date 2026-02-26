@@ -1,0 +1,7 @@
+#!/bin/bash
+
+PY=python3
+
+SCRIPTPATH=`dirname $(realpath $0)`
+
+$PY $SCRIPTPATH/makeManifest.py $@

@@ -1,0 +1,390 @@
+@prefix : <http://example.org/polvo-filosofico#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/polvo-filosofico#> .
+
+<http://example.org/polvo-filosofico#PolvoFilosoficoOntology> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://example.org/polvo-filosofico#feitoPor
+:feitoPor rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/polvo-filosofico#come
+:come rdf:type owl:ObjectProperty ;
+      rdfs:domain :Agente ;
+      rdfs:range :Prato .
+
+
+###  http://example.org/polvo-filosofico#contemPrato
+:contemPrato rdf:type owl:ObjectProperty ;
+             rdfs:domain :Pedido ;
+             rdfs:range :Prato .
+
+
+###  http://example.org/polvo-filosofico#fazPedido
+:fazPedido rdf:type owl:ObjectProperty ;
+           rdfs:domain :Cliente ;
+           rdfs:range :Pedido .
+
+
+###  http://example.org/polvo-filosofico#temIngrediente
+:temIngrediente rdf:type owl:ObjectProperty ;
+                rdfs:domain :Prato ;
+                rdfs:range :Ingrediente .
+
+
+###  http://example.org/polvo-filosofico#trabalhaEm
+:trabalhaEm rdf:type owl:ObjectProperty ;
+            rdfs:domain :Funcionario ;
+            rdfs:range :Restaurante .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/polvo-filosofico#Agente
+:Agente rdf:type owl:Class .
+
+
+###  http://example.org/polvo-filosofico#Animal
+:Animal rdf:type owl:Class ;
+        rdfs:subClassOf :Agente .
+
+
+###  http://example.org/polvo-filosofico#Cliente
+:Cliente rdf:type owl:Class ;
+         rdfs:subClassOf :Pessoa ;
+         owl:disjointWith :RoboCozinheiro .
+
+
+###  http://example.org/polvo-filosofico#Cozinheiro
+:Cozinheiro rdf:type owl:Class ;
+            rdfs:subClassOf :Funcionario .
+
+
+###  http://example.org/polvo-filosofico#Funcionario
+:Funcionario rdf:type owl:Class ;
+             rdfs:subClassOf :Pessoa ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :trabalhaEm ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Restaurante
+                             ] .
+
+
+###  http://example.org/polvo-filosofico#Garcom
+:Garcom rdf:type owl:Class ;
+        rdfs:subClassOf :Funcionario .
+
+
+###  http://example.org/polvo-filosofico#Gato
+:Gato rdf:type owl:Class ;
+      rdfs:subClassOf :Animal .
+
+
+###  http://example.org/polvo-filosofico#Ingrediente
+:Ingrediente rdf:type owl:Class .
+
+
+###  http://example.org/polvo-filosofico#IngredienteAnimal
+:IngredienteAnimal rdf:type owl:Class ;
+                   rdfs:subClassOf :Ingrediente .
+
+
+###  http://example.org/polvo-filosofico#Maquina
+:Maquina rdf:type owl:Class ;
+         rdfs:subClassOf :Agente .
+
+
+###  http://example.org/polvo-filosofico#Pedido
+:Pedido rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :contemPrato ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Prato
+                        ] .
+
+
+###  http://example.org/polvo-filosofico#Pessoa
+:Pessoa rdf:type owl:Class ;
+        rdfs:subClassOf :Agente .
+
+
+###  http://example.org/polvo-filosofico#Polvo
+:Polvo rdf:type owl:Class ;
+       rdfs:subClassOf :Animal ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :come ;
+                         owl:allValuesFrom [ rdf:type owl:Class ;
+                                             owl:complementOf :PratoComPolvo
+                                           ]
+                       ] .
+
+
+###  http://example.org/polvo-filosofico#Prato
+:Prato rdf:type owl:Class .
+
+
+###  http://example.org/polvo-filosofico#PratoCarnivoro
+:PratoCarnivoro rdf:type owl:Class ;
+                rdfs:subClassOf :Prato ;
+                owl:disjointWith :PratoVegano .
+
+
+###  http://example.org/polvo-filosofico#PratoComPolvo
+:PratoComPolvo rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :temIngrediente ;
+                                     owl:someValuesFrom :Polvo
+                                   ] ;
+               rdfs:subClassOf :PratoCarnivoro .
+
+
+###  http://example.org/polvo-filosofico#PratoOntologicamenteAmbiguo
+:PratoOntologicamenteAmbiguo rdf:type owl:Class ;
+                             rdfs:subClassOf :Prato .
+
+
+###  http://example.org/polvo-filosofico#PratoVegano
+:PratoVegano rdf:type owl:Class ;
+             rdfs:subClassOf :Prato ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :temIngrediente ;
+                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                   owl:complementOf :IngredienteAnimal
+                                                 ]
+                             ] .
+
+
+###  http://example.org/polvo-filosofico#Restaurante
+:Restaurante rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty [ owl:inverseOf :trabalhaEm
+                                              ] ;
+                               owl:someValuesFrom :Cozinheiro
+                             ] .
+
+
+###  http://example.org/polvo-filosofico#RoboCozinheiro
+:RoboCozinheiro rdf:type owl:Class ;
+                rdfs:subClassOf :Cozinheiro ,
+                                :Maquina .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/polvo-filosofico#Alface
+:Alface rdf:type owl:NamedIndividual ,
+                 :Ingrediente .
+
+
+###  http://example.org/polvo-filosofico#Ana
+:Ana rdf:type owl:NamedIndividual ,
+              :Cliente ;
+     :come :SaladaExistencial .
+
+
+###  http://example.org/polvo-filosofico#Aristoteles
+:Aristoteles rdf:type owl:NamedIndividual ,
+                      :Cozinheiro ,
+                      :Polvo ;
+             :come :EnsopadoCanibal ,
+                   :PratoDoDia ;
+             :trabalhaEm :O_Polvo_Filosofico .
+
+
+###  http://example.org/polvo-filosofico#BifeDeterminista
+:BifeDeterminista rdf:type owl:NamedIndividual ,
+                           :PratoCarnivoro ;
+                  :temIngrediente :CarneVaca .
+
+
+###  http://example.org/polvo-filosofico#Bruno
+:Bruno rdf:type owl:NamedIndividual ,
+                :Cliente ;
+       :come :BifeDeterminista .
+
+
+###  http://example.org/polvo-filosofico#Carla
+:Carla rdf:type owl:NamedIndividual ,
+                :Cliente ;
+       :come :PratoDoObservador .
+
+
+###  http://example.org/polvo-filosofico#CarneVaca
+:CarneVaca rdf:type owl:NamedIndividual ,
+                    :IngredienteAnimal .
+
+
+###  http://example.org/polvo-filosofico#Cogumelos
+:Cogumelos rdf:type owl:NamedIndividual ,
+                    :Ingrediente .
+
+
+###  http://example.org/polvo-filosofico#Daniel
+:Daniel rdf:type owl:NamedIndividual ,
+                 :Cliente ;
+        :come :EnsopadoCanibal .
+
+
+###  http://example.org/polvo-filosofico#DilemaDoSer
+:DilemaDoSer rdf:type owl:NamedIndividual ,
+                      :PratoOntologicamenteAmbiguo ;
+             :temIngrediente :CarneVaca ,
+                             :Tofu .
+
+
+###  http://example.org/polvo-filosofico#EnsopadoCanibal
+:EnsopadoCanibal rdf:type owl:NamedIndividual ,
+                          :PratoCarnivoro ;
+                 :temIngrediente :PolvoIngrediente .
+
+
+###  http://example.org/polvo-filosofico#Eva
+:Eva rdf:type owl:NamedIndividual ,
+              :Cliente .
+
+
+###  http://example.org/polvo-filosofico#Helena
+:Helena rdf:type owl:NamedIndividual ,
+                 :Garcom ;
+        :trabalhaEm :O_Polvo_Filosofico .
+
+
+###  http://example.org/polvo-filosofico#IngredientePolvo
+:IngredientePolvo rdf:type owl:NamedIndividual ,
+                           :IngredienteAnimal ,
+                           :Polvo .
+
+
+###  http://example.org/polvo-filosofico#Marco
+:Marco rdf:type owl:NamedIndividual ,
+                :Garcom ;
+       :trabalhaEm :O_Polvo_Filosofico .
+
+
+###  http://example.org/polvo-filosofico#O_Polvo_Filosofico
+:O_Polvo_Filosofico rdf:type owl:NamedIndividual ,
+                             :Restaurante .
+
+
+###  http://example.org/polvo-filosofico#Pedido1
+:Pedido1 rdf:type owl:NamedIndividual ,
+                  :Pedido ;
+         :contemPrato :PratoDoDia ,
+                      :SaladaExistencial ;
+         :feitoPor :Ana .
+
+
+###  http://example.org/polvo-filosofico#Pedido2
+:Pedido2 rdf:type owl:NamedIndividual ,
+                  :Pedido ;
+         :contemPrato :BifeDeterminista ;
+         :feitoPor :Bruno .
+
+
+###  http://example.org/polvo-filosofico#Pedido3
+:Pedido3 rdf:type owl:NamedIndividual ,
+                  :Pedido ;
+         :contemPrato :PratoDoObservador ;
+         :feitoPor :Carla .
+
+
+###  http://example.org/polvo-filosofico#Pedido4
+:Pedido4 rdf:type owl:NamedIndividual ,
+                  :Pedido ;
+         :contemPrato :EnsopadoCanibal ;
+         :feitoPor :Daniel .
+
+
+###  http://example.org/polvo-filosofico#Pedido5
+:Pedido5 rdf:type owl:NamedIndividual ,
+                  :Pedido ;
+         :contemPrato :PeixeDoLivreArbitrio ,
+                      :TofuMetafisico ;
+         :feitoPor :Eva .
+
+
+###  http://example.org/polvo-filosofico#Peixe
+:Peixe rdf:type owl:NamedIndividual ,
+                :IngredienteAnimal .
+
+
+###  http://example.org/polvo-filosofico#PeixeDoLivreArbitrio
+:PeixeDoLivreArbitrio rdf:type owl:NamedIndividual ,
+                               :PratoCarnivoro ;
+                      :temIngrediente :Peixe .
+
+
+###  http://example.org/polvo-filosofico#PolvoIngrediente
+:PolvoIngrediente rdf:type owl:NamedIndividual ,
+                           :IngredienteAnimal ,
+                           :Polvo .
+
+
+###  http://example.org/polvo-filosofico#PratoDoDia
+:PratoDoDia rdf:type owl:NamedIndividual ,
+                     :PratoCarnivoro ;
+            :temIngrediente :IngredientePolvo .
+
+
+###  http://example.org/polvo-filosofico#PratoDoObservador
+:PratoDoObservador rdf:type owl:NamedIndividual ,
+                            :PratoOntologicamenteAmbiguo ;
+                   :temIngrediente :Cogumelos ,
+                                   :Peixe .
+
+
+###  http://example.org/polvo-filosofico#RoboCozinheiro1
+:RoboCozinheiro1 rdf:type owl:NamedIndividual ,
+                          :RoboCozinheiro ;
+                 :trabalhaEm :O_Polvo_Filosofico .
+
+
+###  http://example.org/polvo-filosofico#SaladaExistencial
+:SaladaExistencial rdf:type owl:NamedIndividual ,
+                            :PratoVegano ;
+                   :temIngrediente :Alface ,
+                                   :Tomate .
+
+
+###  http://example.org/polvo-filosofico#Schrodinger
+:Schrodinger rdf:type owl:NamedIndividual ,
+                      :Cliente ,
+                      :Funcionario ,
+                      :Gato ;
+             :trabalhaEm :O_Polvo_Filosofico .
+
+
+###  http://example.org/polvo-filosofico#Tofu
+:Tofu rdf:type owl:NamedIndividual ,
+               :Ingrediente .
+
+
+###  http://example.org/polvo-filosofico#TofuMetafisico
+:TofuMetafisico rdf:type owl:NamedIndividual ,
+                         :PratoVegano ;
+                :temIngrediente :Cogumelos ,
+                                :Tofu .
+
+
+###  http://example.org/polvo-filosofico#Tomate
+:Tomate rdf:type owl:NamedIndividual ,
+                 :Ingrediente .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

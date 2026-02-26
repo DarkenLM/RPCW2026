@@ -1,0 +1,141 @@
+{
+    "authorName": "Rafael Santos Fernandes",
+    "authorId": "PG60298",
+    "authorPhoto": "../assets/img/foto.jpg",
+
+    "tpcNum": 3,
+    "title": "Semana 3",
+    "summary": "Este trabalho incidiu sobre a tecnologia de base de dados GraphDB e a linguagem SPARQL.",
+    "results": {
+        "Manifesto": [
+            {
+                "name": "Gerador de Manifestos",
+                "file": "./manifest/makeManifest.py",
+                "desc": [
+                    "Nova versão do gerador de manifestos para suportar resulados que não envolvam ficheiros.",
+                    "- Propriedade `file` é agora opcional.",
+                    "- Adicionada propriedade `name` ao objeto de resultado, que define um nome opcional para o resultado.",
+                    "- Reestruturado o formato de resultados no markdown resultante.",
+                    "- Adicionado suporte a múltiplas linhas de texto para a propriedade `desc` através do uso de um array em vez de uma string. Valores em string ainda suportados."
+                ]
+            }
+        ],
+        "Polvo Filosófico": [
+            {
+                "name": "Alterações á Topologia",
+                "desc": [
+                    "- Movida classe `PratoComPolvo` de `owl:Thing` para `PratoCarnívoro`.",
+                    "- Removido indivíduo `PolvoIngrediente`.",
+                    "- Substituída propriedade `:temIngrediente PolvoIngrediente` por `:temIngrediente IngredientePolvo` no indivíduo `EnsopadoCanibal`."
+                ]
+            }
+        ],
+        "Queries SPARQL": [
+            {
+                "name": "Quem foram os clientes?",
+                "desc": [
+                    "#### Query",
+                    "```sparql",
+                    "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>",
+                    "PREFIX owl: <http://www.w3.org/2002/07/owl#>",
+                    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
+                    "PREFIX : <http://example.org/polvo-filosofico#>",
+                    "SELECT * WHERE {",
+                    "    ?s a :Cliente .",
+                    "}",
+                    "```",
+                    "",
+                    "#### Resposta (CSV)",
+                    "```",
+                    "s",
+                    ":Ana",
+                    ":Bruno",
+                    ":Carla",
+                    ":Daniel",
+                    ":Eva",
+                    ":Schrodinger",
+                    "```"
+                ]
+            },
+            {
+                "name": "Que pratos serve o restaurante?",
+                "desc": [
+                    "#### Query",
+                    "```sparql",
+                    "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>",
+                    "PREFIX owl: <http://www.w3.org/2002/07/owl#>",
+                    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
+                    "PREFIX : <http://example.org/polvo-filosofico#>",
+                    "SELECT * WHERE {",
+                    "    ?s a :Prato .",
+                    "}",
+                    "```",
+                    "",
+                    "#### Resposta (CSV)",
+                    "```",
+                    "s",
+                    ":SaladaExistencial",
+                    ":EnsopadoCanibal",
+                    ":PratoDoDia",
+                    ":BifeDeterminista",
+                    ":PratoDoObservador",
+                    ":DilemaDoSer",
+                    ":PeixeDoLivreArbitrio",
+                    ":TofuMetafisico",
+                    "```"
+                ]
+            },
+            {
+                "name": "Quais os ingredientes necessários á confecção dos pratos (todos)?",
+                "desc": [
+                    "#### Query",
+                    "```sparql",
+                    "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>",
+                    "PREFIX owl: <http://www.w3.org/2002/07/owl#>",
+                    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
+                    "PREFIX : <http://example.org/polvo-filosofico#>",
+                    "SELECT DISTINCT ?i WHERE {",
+                    "    ?s a :Prato ;",
+                    "       :temIngrediente ?i",
+                    "}",
+                    "```",
+                    "",
+                    "#### Resposta (CSV)",
+                    "```",
+                    "i",
+                    ":Alface",
+                    ":Tomate",
+                    ":PolvoIngrediente",
+                    ":IngredientePolvo",
+                    ":CarneVaca",
+                    ":Cogumelos",
+                    ":Peixe",
+                    ":Tofu",
+                    "```"
+                ]
+            },
+            {
+                "name": "Há funcionários que sejam também clientes?",
+                "desc": [
+                    "#### Query",
+                    "```sparql",
+                    "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>",
+                    "PREFIX owl: <http://www.w3.org/2002/07/owl#>",
+                    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
+                    "PREFIX : <http://example.org/polvo-filosofico#>",
+                    "SELECT * WHERE {",
+                    "    ?s a :Funcionario ,",
+                    "         :Cliente",
+                    "}",
+                    "```",
+                    "",
+                    "#### Resposta (CSV)",
+                    "```",
+                    "s",
+                    ":Schrodinger",
+                    "```"
+                ]
+            }
+        ]
+    }
+}
