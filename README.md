@@ -7,6 +7,9 @@
 
 ## Lista de Resultados
 - [TPC 1](./TPC1/)
+- [TPC 2](./TPC2/)
+- [TPC 3](./TPC3/)
+- [TPC 4](./TPC4/)
 
 ___
 

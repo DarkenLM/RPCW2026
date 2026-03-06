@@ -1,0 +1,678 @@
+[
+  {
+    "id": "Linha_Alpha_0",
+    "tipo": "LinhaOriginal"
+  },
+  {
+    "id": "Linha_Beta_0",
+    "tipo": "LinhaOriginal"
+  },
+  {
+    "id": "Linha_Gama_Alt",
+    "tipo": "LinhaAlternativa"
+  },
+  {
+    "id": "Linha_Delta_Alt",
+    "tipo": "LinhaAlternativa"
+  },
+  {
+    "id": "Linha_Epsilon_Alt",
+    "tipo": "LinhaAlternativa"
+  },
+  {
+    "id": "Biblioteca_Infinita",
+    "tipo": "Biblioteca"
+  },
+  {
+    "id": "Torre_do_Conhecimento",
+    "tipo": "Biblioteca"
+  },
+  {
+    "id": "Cofre_do_Tempo_Perdido",
+    "tipo": "Biblioteca"
+  },
+  {
+    "id": "Nascimento_do_Sol",
+    "tipo": "EventoHistorico"
+  },
+  {
+    "id": "Extincao_Dino",
+    "tipo": "EventoHistorico"
+  },
+  {
+    "id": "Pax_Romana",
+    "tipo": "EventoHistorico"
+  },
+  {
+    "id": "Renascimento",
+    "tipo": "EventoHistorico"
+  },
+  {
+    "id": "Exploracao_Espacial",
+    "tipo": "EventoHistorico"
+  },
+  {
+    "id": "Crise_das_Tulipas",
+    "tipo": "EventoHistorico"
+  },
+  {
+    "id": "Cura_da_Mortalidade",
+    "tipo": "EventoFuturo"
+  },
+  {
+    "id": "Viagem_Intergalactica",
+    "tipo": "EventoFuturo"
+  },
+  {
+    "id": "IA_Autoconsfiente",
+    "tipo": "EventoFuturo"
+  },
+  {
+    "id": "Fim_da_Escassez",
+    "tipo": "EventoFuturo"
+  },
+  {
+    "id": "Dominio_da_Energia_Livre",
+    "tipo": "EventoFuturo"
+  },
+  {
+    "id": "Primeira_Cidade_Submarina",
+    "tipo": "EventoFuturo"
+  },
+  {
+    "id": "Zeno",
+    "tipo": "Bibliotecario",
+    "trabalhaEm": "Biblioteca_Infinita"
+  },
+  {
+    "id": "Hypatia_II",
+    "tipo": "Bibliotecario",
+    "trabalhaEm": "Torre_do_Conhecimento"
+  },
+  {
+    "id": "Boecio",
+    "tipo": "Bibliotecario",
+    "trabalhaEm": "Biblioteca_Infinita"
+  },
+  {
+    "id": "Cassiodoro",
+    "tipo": "Bibliotecario",
+    "trabalhaEm": "Biblioteca_Infinita"
+  },
+  {
+    "id": "Ptolomeu_X",
+    "tipo": "Bibliotecario",
+    "trabalhaEm": "Biblioteca_Infinita"
+  },
+  {
+    "id": "Aurelio",
+    "tipo": "Bibliotecario",
+    "trabalhaEm": "Cofre_do_Tempo_Perdido"
+  },
+  {
+    "id": "Autor_A",
+    "tipo": "Autor",
+    "nome": "Isaac Asimov II"
+  },
+  {
+    "id": "Autor_B",
+    "tipo": "Autor",
+    "nome": "Ursula K. Le Guin II"
+  },
+  {
+    "id": "Autor_C",
+    "tipo": "Autor",
+    "nome": "Philip K. Dick II"
+  },
+  {
+    "id": "Autor_D",
+    "tipo": "Autor",
+    "nome": "Jorge Luis Borges II"
+  },
+  {
+    "id": "Autor_E",
+    "tipo": "Autor",
+    "nome": "Octavia Butler II"
+  },
+  {
+    "id": "Autor_F",
+    "tipo": "Autor",
+    "nome": "Italo Calvino II"
+  },
+  {
+    "id": "Autor_G",
+    "tipo": "Autor",
+    "nome": "Stanislaw Lem II"
+  },
+  {
+    "id": "Autor_H",
+    "tipo": "Autor",
+    "nome": "Margaret Atwood II"
+  },
+  {
+    "id": "Autor_I",
+    "tipo": "Autor",
+    "nome": "Arthur C. Clarke II"
+  },
+  {
+    "id": "Autor_J",
+    "tipo": "Autor",
+    "nome": "H.G. Wells II"
+  },
+  {
+    "id": "Leitor_Vip_1",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_2",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_3",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_4",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_5",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_6",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_7",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_8",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_9",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_10",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_11",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_12",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_13",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_Vip_14",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Livro_Temporal_001",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_F",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Pax_Romana",
+    "existeEm": "Linha_Beta_0"
+  },
+  {
+    "id": "Livro_Temporal_002",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_D",
+    "pertenceA": "Biblioteca_Infinita",
+    "refereEvento": "Nascimento_do_Sol",
+    "existeEm": "Linha_Alpha_0"
+  },
+  {
+    "id": "Livro_Temporal_003",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_I",
+    "pertenceA": "Biblioteca_Infinita",
+    "existeEm": [
+      "Linha_Alpha_0",
+      "Linha_Delta_Alt"
+    ],
+    "refereEvento": "Renascimento"
+  },
+  {
+    "id": "Livro_Temporal_004",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_H",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Crise_das_Tulipas",
+    "existeEm": "Linha_Alpha_0"
+  },
+  {
+    "id": "Livro_Temporal_005",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_A",
+    "pertenceA": "Biblioteca_Infinita",
+    "existeEm": [
+      "Linha_Beta_0",
+      "Linha_Gama_Alt"
+    ],
+    "refereEvento": "Exploracao_Espacial"
+  },
+  {
+    "id": "Livro_Temporal_006",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_J",
+    "pertenceA": "Biblioteca_Infinita",
+    "refereEvento": "Extincao_Dino",
+    "existeEm": "Linha_Beta_0"
+  },
+  {
+    "id": "Livro_Temporal_007",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_F",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "existeEm": [
+      "Linha_Alpha_0",
+      "Linha_Delta_Alt"
+    ],
+    "refereEvento": "Nascimento_do_Sol"
+  },
+  {
+    "id": "Livro_Temporal_008",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_E",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "existeEm": [
+      "Linha_Alpha_0",
+      "Linha_Epsilon_Alt"
+    ],
+    "refereEvento": "Nascimento_do_Sol"
+  },
+  {
+    "id": "Livro_Temporal_009",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_J",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Viagem_Intergalactica",
+    "existeEm": "Linha_Epsilon_Alt"
+  },
+  {
+    "id": "Livro_Temporal_010",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_E",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "refereEvento": "Viagem_Intergalactica",
+    "existeEm": "Linha_Epsilon_Alt"
+  },
+  {
+    "id": "Livro_Temporal_011",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_A",
+    "pertenceA": "Biblioteca_Infinita",
+    "existeEm": [
+      "Linha_Alpha_0",
+      "Linha_Delta_Alt"
+    ],
+    "refereEvento": "Extincao_Dino"
+  },
+  {
+    "id": "Livro_Temporal_012",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_J",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Nascimento_do_Sol",
+    "existeEm": "Linha_Beta_0"
+  },
+  {
+    "id": "Livro_Temporal_013",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_J",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "existeEm": [
+      "Linha_Beta_0",
+      "Linha_Delta_Alt"
+    ],
+    "refereEvento": "Pax_Romana"
+  },
+  {
+    "id": "Livro_Temporal_014",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_G",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Extincao_Dino",
+    "existeEm": "Linha_Alpha_0"
+  },
+  {
+    "id": "Livro_Temporal_015",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_A",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "existeEm": [
+      "Linha_Beta_0",
+      "Linha_Gama_Alt"
+    ],
+    "refereEvento": "Fim_da_Escassez"
+  },
+  {
+    "id": "Livro_Temporal_016",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_E",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Viagem_Intergalactica",
+    "existeEm": "Linha_Gama_Alt"
+  },
+  {
+    "id": "Livro_Temporal_017",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_B",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "refereEvento": "Cura_da_Mortalidade",
+    "existeEm": "Linha_Gama_Alt"
+  },
+  {
+    "id": "Livro_Temporal_018",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_F",
+    "pertenceA": "Torre_do_Conhecimento",
+    "existeEm": [
+      "Linha_Alpha_0",
+      "Linha_Delta_Alt"
+    ],
+    "refereEvento": "Viagem_Intergalactica"
+  },
+  {
+    "id": "Livro_Temporal_019",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_H",
+    "pertenceA": "Biblioteca_Infinita",
+    "existeEm": [
+      "Linha_Alpha_0",
+      "Linha_Epsilon_Alt"
+    ],
+    "refereEvento": "Cura_da_Mortalidade"
+  },
+  {
+    "id": "Livro_Temporal_020",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_D",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "refereEvento": "Exploracao_Espacial",
+    "existeEm": "Linha_Beta_0"
+  },
+  {
+    "id": "Livro_Temporal_021",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_D",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Fim_da_Escassez",
+    "existeEm": "Linha_Delta_Alt"
+  },
+  {
+    "id": "Livro_Temporal_022",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_D",
+    "pertenceA": "Biblioteca_Infinita",
+    "refereEvento": "Nascimento_do_Sol",
+    "existeEm": "Linha_Beta_0"
+  },
+  {
+    "id": "Livro_Temporal_023",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_A",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "refereEvento": "Extincao_Dino",
+    "existeEm": "Linha_Alpha_0"
+  },
+  {
+    "id": "Livro_Temporal_024",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_A",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Renascimento",
+    "existeEm": "Linha_Alpha_0"
+  },
+  {
+    "id": "Livro_Temporal_025",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_G",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Crise_das_Tulipas",
+    "existeEm": "Linha_Beta_0"
+  },
+  {
+    "id": "Livro_Temporal_026",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_C",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "existeEm": [
+      "Linha_Alpha_0",
+      "Linha_Gama_Alt"
+    ],
+    "refereEvento": "Extincao_Dino"
+  },
+  {
+    "id": "Livro_Temporal_027",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_F",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "refereEvento": "Crise_das_Tulipas",
+    "existeEm": "Linha_Beta_0"
+  },
+  {
+    "id": "Livro_Temporal_028",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_E",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Crise_das_Tulipas",
+    "existeEm": "Linha_Alpha_0"
+  },
+  {
+    "id": "Livro_Temporal_029",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_F",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "existeEm": [
+      "Linha_Beta_0",
+      "Linha_Delta_Alt"
+    ],
+    "refereEvento": "Pax_Romana"
+  },
+  {
+    "id": "Livro_Temporal_030",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_A",
+    "pertenceA": "Biblioteca_Infinita",
+    "existeEm": [
+      "Linha_Beta_0",
+      "Linha_Gama_Alt"
+    ],
+    "refereEvento": "Viagem_Intergalactica"
+  },
+  {
+    "id": "Livro_Temporal_031",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_I",
+    "pertenceA": "Biblioteca_Infinita",
+    "refereEvento": "Pax_Romana",
+    "existeEm": "Linha_Alpha_0"
+  },
+  {
+    "id": "Livro_Temporal_032",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_F",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "refereEvento": "Crise_das_Tulipas",
+    "existeEm": "Linha_Alpha_0"
+  },
+  {
+    "id": "Livro_Temporal_033",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_I",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "refereEvento": "Primeira_Cidade_Submarina",
+    "existeEm": "Linha_Delta_Alt"
+  },
+  {
+    "id": "Livro_Temporal_034",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_H",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Fim_da_Escassez",
+    "existeEm": "Linha_Delta_Alt"
+  },
+  {
+    "id": "Livro_Temporal_035",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_B",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Viagem_Intergalactica",
+    "existeEm": "Linha_Delta_Alt"
+  },
+  {
+    "id": "Livro_Temporal_036",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_I",
+    "pertenceA": "Biblioteca_Infinita",
+    "refereEvento": "Nascimento_do_Sol",
+    "existeEm": "Linha_Beta_0"
+  },
+  {
+    "id": "Livro_Temporal_037",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_B",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "existeEm": [
+      "Linha_Beta_0",
+      "Linha_Delta_Alt"
+    ],
+    "refereEvento": "Extincao_Dino"
+  },
+  {
+    "id": "Livro_Temporal_038",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_E",
+    "pertenceA": "Torre_do_Conhecimento",
+    "existeEm": [
+      "Linha_Alpha_0",
+      "Linha_Delta_Alt"
+    ],
+    "refereEvento": "Exploracao_Espacial"
+  },
+  {
+    "id": "Livro_Temporal_039",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_E",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "refereEvento": "Primeira_Cidade_Submarina",
+    "existeEm": "Linha_Epsilon_Alt"
+  },
+  {
+    "id": "Livro_Temporal_040",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_A",
+    "pertenceA": "Biblioteca_Infinita",
+    "existeEm": [
+      "Linha_Beta_0",
+      "Linha_Gama_Alt"
+    ],
+    "refereEvento": "Nascimento_do_Sol"
+  },
+  {
+    "id": "Livro_Temporal_041",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_C",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "existeEm": [
+      "Linha_Beta_0",
+      "Linha_Epsilon_Alt"
+    ],
+    "refereEvento": "Cura_da_Mortalidade"
+  },
+  {
+    "id": "Livro_Temporal_042",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_E",
+    "pertenceA": "Biblioteca_Infinita",
+    "refereEvento": "Dominio_da_Energia_Livre",
+    "existeEm": "Linha_Epsilon_Alt"
+  },
+  {
+    "id": "Livro_Temporal_043",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_C",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "existeEm": [
+      "Linha_Beta_0",
+      "Linha_Epsilon_Alt"
+    ],
+    "refereEvento": "Viagem_Intergalactica"
+  },
+  {
+    "id": "Livro_Temporal_044",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_B",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "refereEvento": "IA_Autoconsfiente",
+    "existeEm": "Linha_Gama_Alt"
+  },
+  {
+    "id": "Livro_Temporal_045",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_G",
+    "pertenceA": "Biblioteca_Infinita",
+    "existeEm": [
+      "Linha_Beta_0",
+      "Linha_Epsilon_Alt"
+    ],
+    "refereEvento": "IA_Autoconsfiente"
+  },
+  {
+    "id": "Livro_Temporal_046",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_C",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Cura_da_Mortalidade",
+    "existeEm": "Linha_Delta_Alt"
+  },
+  {
+    "id": "Livro_Temporal_047",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_H",
+    "pertenceA": "Cofre_do_Tempo_Perdido",
+    "existeEm": [
+      "Linha_Beta_0",
+      "Linha_Gama_Alt"
+    ],
+    "refereEvento": "Exploracao_Espacial"
+  },
+  {
+    "id": "Livro_Temporal_048",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_E",
+    "pertenceA": "Torre_do_Conhecimento",
+    "refereEvento": "Viagem_Intergalactica",
+    "existeEm": "Linha_Epsilon_Alt"
+  },
+  {
+    "id": "Livro_Temporal_049",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_J",
+    "pertenceA": "Biblioteca_Infinita",
+    "refereEvento": "Viagem_Intergalactica",
+    "existeEm": "Linha_Delta_Alt"
+  },
+  {
+    "id": "Livro_Temporal_050",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_J",
+    "pertenceA": "Torre_do_Conhecimento",
+    "existeEm": [
+      "Linha_Alpha_0",
+      "Linha_Delta_Alt"
+    ],
+    "refereEvento": "Pax_Romana"
+  }
+]

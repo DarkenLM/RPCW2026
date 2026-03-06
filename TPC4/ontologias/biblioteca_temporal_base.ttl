@@ -1,0 +1,249 @@
+@prefix : <http://rpcw.di.uminho.pt/biblioteca_temporal/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rpcw.di.uminho.pt/biblioteca_temporal/> .
+
+<http://rpcw.di.uminho.pt/biblioteca_temporal> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/escritoPor
+:escritoPor rdf:type owl:ObjectProperty ;
+            rdfs:domain :Livro ;
+            rdfs:range :Autor .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/existeEm
+:existeEm rdf:type owl:ObjectProperty ;
+          rdfs:domain :Livro ;
+          rdfs:range :LinhaTemporal .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/ocorremEm
+:ocorremEm rdf:type owl:ObjectProperty ;
+           rdfs:domain :Evento ;
+           rdfs:range :LinhaTemporal .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/pertenceA
+:pertenceA rdf:type owl:ObjectProperty ;
+           rdfs:domain :Livro ;
+           rdfs:range :Biblioteca .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/refereEvento
+:refereEvento rdf:type owl:ObjectProperty ;
+              rdfs:domain :Livro ;
+              rdfs:range :Evento .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/requisitam
+:requisitam rdf:type owl:ObjectProperty ;
+            rdfs:domain :Leitor ;
+            rdfs:range :Livro .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/trabalhaEm
+:trabalhaEm rdf:type owl:ObjectProperty ;
+            rdfs:domain :Bibliotecario ;
+            rdfs:range :Biblioteca .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/nome
+:nome rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal#LivroImpossivel
+:LivroImpossivel rdf:type owl:Class ;
+                 rdfs:subClassOf :Livro .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Agente
+:Agente rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Autor
+:Autor rdf:type owl:Class ;
+       rdfs:subClassOf :Pessoa .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Biblioteca
+:Biblioteca rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Bibliotecario
+:Bibliotecario rdf:type owl:Class ;
+               rdfs:subClassOf :Pessoa ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :trabalhaEm ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Biblioteca
+                               ] .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Empréstimo
+:Empréstimo rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/EntidadeTemporal
+:EntidadeTemporal rdf:type owl:Class ;
+                  rdfs:subClassOf :Agente .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Evento
+:Evento rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/EventoFuturo
+:EventoFuturo rdf:type owl:Class ;
+              rdfs:subClassOf :Evento ;
+              owl:disjointWith :EventoHistorico .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/EventoHistorico
+:EventoHistorico rdf:type owl:Class ;
+                 rdfs:subClassOf :Evento .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Leitor
+:Leitor rdf:type owl:Class ;
+        rdfs:subClassOf :Pessoa .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/LinhaAlternativa
+:LinhaAlternativa rdf:type owl:Class ;
+                  rdfs:subClassOf :LinhaTemporal ;
+                  owl:disjointWith :LinhaOriginal .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/LinhaOriginal
+:LinhaOriginal rdf:type owl:Class ;
+               rdfs:subClassOf :LinhaTemporal .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/LinhaTemporal
+:LinhaTemporal rdf:type owl:Class .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Livro
+:Livro rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :existeEm ;
+                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :LinhaTemporal
+                       ] .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/LivroFiccional
+:LivroFiccional rdf:type owl:Class ;
+                rdfs:subClassOf :Livro ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :refereEvento ;
+                                  owl:allValuesFrom [ rdf:type owl:Class ;
+                                                      owl:complementOf :EventoHistorico
+                                                    ]
+                                ] ;
+                owl:disjointWith :LivroHistorico .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/LivroHistorico
+:LivroHistorico rdf:type owl:Class ;
+                rdfs:subClassOf :Livro ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :refereEvento ;
+                                  owl:allValuesFrom :EventoHistorico
+                                ] .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/LivroParadoxal
+:LivroParadoxal rdf:type owl:Class ;
+                rdfs:subClassOf :Livro ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :existeEm ;
+                                                         owl:someValuesFrom :LinhaAlternativa
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :existeEm ;
+                                                         owl:someValuesFrom :LinhaOriginal
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Pessoa
+:Pessoa rdf:type owl:Class ;
+        rdfs:subClassOf :Agente ,
+                        owl:Thing .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Biblioteca_Entre_Ontem_e_Amanha
+:Biblioteca_Entre_Ontem_e_Amanha rdf:type owl:NamedIndividual ,
+                                          :Biblioteca .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Big_Bang
+:Big_Bang rdf:type owl:NamedIndividual ,
+                   :EventoHistorico .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Cronos
+:Cronos rdf:type owl:NamedIndividual ,
+                 :Autor ,
+                 :Bibliotecario .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Ex_Nihilo_Nihil_Fit
+:Ex_Nihilo_Nihil_Fit rdf:type owl:NamedIndividual ,
+                              :LivroImpossivel ;
+                     :escritoPor :Cronos .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Formação_da_Via_Láctea
+:Formação_da_Via_Láctea rdf:type owl:NamedIndividual ,
+                                 :EventoHistorico .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Gênesis
+:Gênesis rdf:type owl:NamedIndividual ,
+                  :LivroHistorico ;
+         :escritoPor :Cronos ;
+         :existeEm :Linha_T0 ,
+                   :Linha_T1 ;
+         :refereEvento :Big_Bang .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Linha_T0
+:Linha_T0 rdf:type owl:NamedIndividual ,
+                   :LinhaOriginal .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Linha_T1
+:Linha_T1 rdf:type owl:NamedIndividual ,
+                   :LinhaAlternativa .
+
+
+###  http://rpcw.di.uminho.pt/biblioteca_temporal/Morte_Térmica_do_Universo
+:Morte_Térmica_do_Universo rdf:type owl:NamedIndividual ,
+                                    :EventoFuturo .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

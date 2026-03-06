@@ -1,0 +1,676 @@
+[
+  {
+    "id": "Linha_Original_Prime",
+    "tipo": "LinhaOriginal"
+  },
+  {
+    "id": "Linha_Original_00",
+    "tipo": "LinhaOriginal"
+  },
+  {
+    "id": "Linha_Alt_A",
+    "tipo": "LinhaAlternativa"
+  },
+  {
+    "id": "Linha_Alt_Omega",
+    "tipo": "LinhaAlternativa"
+  },
+  {
+    "id": "Linha_Alt_Recursiva",
+    "tipo": "LinhaAlternativa"
+  },
+  {
+    "id": "Biblioteca_Central_do_Tempo",
+    "tipo": "Biblioteca"
+  },
+  {
+    "id": "Arquivo_do_Vazio_Temporal",
+    "tipo": "Biblioteca"
+  },
+  {
+    "id": "Descobrimento_da_America",
+    "tipo": "EventoHistorico"
+  },
+  {
+    "id": "Revolucao_Industrial",
+    "tipo": "EventoHistorico"
+  },
+  {
+    "id": "Primeiro_Voo",
+    "tipo": "EventoHistorico"
+  },
+  {
+    "id": "Queda_do_Muro",
+    "tipo": "EventoHistorico"
+  },
+  {
+    "id": "Crise_de_1929",
+    "tipo": "EventoHistorico"
+  },
+  {
+    "id": "Nascimento_da_IA",
+    "tipo": "EventoFuturo"
+  },
+  {
+    "id": "Guerra_dos_Nanobots",
+    "tipo": "EventoFuturo"
+  },
+  {
+    "id": "Extincao_da_Fome",
+    "tipo": "EventoFuturo"
+  },
+  {
+    "id": "Contato_Sirius",
+    "tipo": "EventoFuturo"
+  },
+  {
+    "id": "Explosao_Solar_2100",
+    "tipo": "EventoFuturo"
+  },
+  {
+    "id": "Arnaldo",
+    "tipo": "Bibliotecario",
+    "trabalhaEm": "Biblioteca_Central_do_Tempo"
+  },
+  {
+    "id": "Sibilina",
+    "tipo": "Bibliotecario",
+    "trabalhaEm": "Biblioteca_Central_do_Tempo"
+  },
+  {
+    "id": "Eustachio",
+    "tipo": "Bibliotecario",
+    "trabalhaEm": "Arquivo_do_Vazio_Temporal"
+  },
+  {
+    "id": "Clarice",
+    "tipo": "Bibliotecario",
+    "trabalhaEm": "Arquivo_do_Vazio_Temporal"
+  },
+  {
+    "id": "Dante_B",
+    "tipo": "Bibliotecario",
+    "trabalhaEm": "Biblioteca_Central_do_Tempo"
+  },
+  {
+    "id": "Autor_1",
+    "tipo": "Autor"
+  },
+  {
+    "id": "Autor_2",
+    "tipo": "Autor"
+  },
+  {
+    "id": "Autor_3",
+    "tipo": "Autor"
+  },
+  {
+    "id": "Autor_4",
+    "tipo": "Autor"
+  },
+  {
+    "id": "Autor_5",
+    "tipo": "Autor"
+  },
+  {
+    "id": "Autor_6",
+    "tipo": "Autor"
+  },
+  {
+    "id": "Autor_7",
+    "tipo": "Autor"
+  },
+  {
+    "id": "Autor_8",
+    "tipo": "Autor"
+  },
+  {
+    "id": "Autor_9",
+    "tipo": "Autor"
+  },
+  {
+    "id": "Autor_10",
+    "tipo": "Autor"
+  },
+  {
+    "id": "Leitor_1",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_2",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_3",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_4",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_5",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_6",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_7",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_8",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_9",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_10",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_11",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_12",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_13",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_14",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Leitor_15",
+    "tipo": "Leitor"
+  },
+  {
+    "id": "Livro_001",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_10",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "existeEm": [
+      "Linha_Original_00",
+      "Linha_Alt_Omega"
+    ],
+    "refereEvento": "Queda_do_Muro"
+  },
+  {
+    "id": "Livro_002",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_4",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "existeEm": [
+      "Linha_Original_Prime",
+      "Linha_Alt_A"
+    ],
+    "refereEvento": "Queda_do_Muro"
+  },
+  {
+    "id": "Livro_003",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_4",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Nascimento_da_IA",
+    "existeEm": "Linha_Alt_A"
+  },
+  {
+    "id": "Livro_004",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_5",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Descobrimento_da_America",
+    "existeEm": "Linha_Original_Prime"
+  },
+  {
+    "id": "Livro_005",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_10",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Explosao_Solar_2100",
+    "existeEm": "Linha_Alt_Recursiva"
+  },
+  {
+    "id": "Livro_006",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_9",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Explosao_Solar_2100",
+    "existeEm": "Linha_Alt_A"
+  },
+  {
+    "id": "Livro_007",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_5",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "existeEm": [
+      "Linha_Original_00",
+      "Linha_Alt_A"
+    ],
+    "refereEvento": "Queda_do_Muro"
+  },
+  {
+    "id": "Livro_008",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_4",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Extincao_da_Fome",
+    "existeEm": "Linha_Alt_A"
+  },
+  {
+    "id": "Livro_009",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_2",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "existeEm": [
+      "Linha_Original_Prime",
+      "Linha_Alt_Recursiva"
+    ],
+    "refereEvento": "Explosao_Solar_2100"
+  },
+  {
+    "id": "Livro_010",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_10",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Nascimento_da_IA",
+    "existeEm": "Linha_Alt_Recursiva"
+  },
+  {
+    "id": "Livro_011",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_6",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Revolucao_Industrial",
+    "existeEm": "Linha_Original_Prime"
+  },
+  {
+    "id": "Livro_012",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_9",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Explosao_Solar_2100",
+    "existeEm": "Linha_Alt_A"
+  },
+  {
+    "id": "Livro_013",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_9",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "existeEm": [
+      "Linha_Original_Prime",
+      "Linha_Alt_Recursiva"
+    ],
+    "refereEvento": "Guerra_dos_Nanobots"
+  },
+  {
+    "id": "Livro_014",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_3",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "existeEm": [
+      "Linha_Original_Prime",
+      "Linha_Alt_Omega"
+    ],
+    "refereEvento": "Crise_de_1929"
+  },
+  {
+    "id": "Livro_015",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_10",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "existeEm": [
+      "Linha_Original_00",
+      "Linha_Alt_A"
+    ],
+    "refereEvento": "Queda_do_Muro"
+  },
+  {
+    "id": "Livro_016",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_2",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "existeEm": [
+      "Linha_Original_Prime",
+      "Linha_Alt_Recursiva"
+    ],
+    "refereEvento": "Explosao_Solar_2100"
+  },
+  {
+    "id": "Livro_017",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_7",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Guerra_dos_Nanobots",
+    "existeEm": "Linha_Alt_A"
+  },
+  {
+    "id": "Livro_018",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_9",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Crise_de_1929",
+    "existeEm": "Linha_Original_00"
+  },
+  {
+    "id": "Livro_019",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_1",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Explosao_Solar_2100",
+    "existeEm": "Linha_Alt_A"
+  },
+  {
+    "id": "Livro_020",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_5",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Nascimento_da_IA",
+    "existeEm": "Linha_Alt_Recursiva"
+  },
+  {
+    "id": "Livro_021",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_7",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Revolucao_Industrial",
+    "existeEm": "Linha_Original_Prime"
+  },
+  {
+    "id": "Livro_022",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_9",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Nascimento_da_IA",
+    "existeEm": "Linha_Alt_A"
+  },
+  {
+    "id": "Livro_023",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_8",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "existeEm": [
+      "Linha_Original_Prime",
+      "Linha_Alt_A"
+    ],
+    "refereEvento": "Explosao_Solar_2100"
+  },
+  {
+    "id": "Livro_024",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_2",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Revolucao_Industrial",
+    "existeEm": "Linha_Original_Prime"
+  },
+  {
+    "id": "Livro_025",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_5",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "existeEm": [
+      "Linha_Original_Prime",
+      "Linha_Alt_Omega"
+    ],
+    "refereEvento": "Revolucao_Industrial"
+  },
+  {
+    "id": "Livro_026",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_5",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Descobrimento_da_America",
+    "existeEm": "Linha_Original_Prime"
+  },
+  {
+    "id": "Livro_027",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_6",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Queda_do_Muro",
+    "existeEm": "Linha_Original_00"
+  },
+  {
+    "id": "Livro_028",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_4",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Queda_do_Muro",
+    "existeEm": "Linha_Original_Prime"
+  },
+  {
+    "id": "Livro_029",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_7",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Guerra_dos_Nanobots",
+    "existeEm": "Linha_Alt_A"
+  },
+  {
+    "id": "Livro_030",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_1",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Contato_Sirius",
+    "existeEm": "Linha_Alt_Omega"
+  },
+  {
+    "id": "Livro_031",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_2",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "existeEm": [
+      "Linha_Original_00",
+      "Linha_Alt_Omega"
+    ],
+    "refereEvento": "Crise_de_1929"
+  },
+  {
+    "id": "Livro_032",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_8",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Revolucao_Industrial",
+    "existeEm": "Linha_Original_00"
+  },
+  {
+    "id": "Livro_033",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_9",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Guerra_dos_Nanobots",
+    "existeEm": "Linha_Alt_A"
+  },
+  {
+    "id": "Livro_034",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_9",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "existeEm": [
+      "Linha_Original_00",
+      "Linha_Alt_A"
+    ],
+    "refereEvento": "Crise_de_1929"
+  },
+  {
+    "id": "Livro_035",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_2",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Crise_de_1929",
+    "existeEm": "Linha_Original_00"
+  },
+  {
+    "id": "Livro_036",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_7",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "existeEm": [
+      "Linha_Original_00",
+      "Linha_Alt_Recursiva"
+    ],
+    "refereEvento": "Guerra_dos_Nanobots"
+  },
+  {
+    "id": "Livro_037",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_6",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "existeEm": [
+      "Linha_Original_00",
+      "Linha_Alt_A"
+    ],
+    "refereEvento": "Extincao_da_Fome"
+  },
+  {
+    "id": "Livro_038",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_3",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Explosao_Solar_2100",
+    "existeEm": "Linha_Alt_Recursiva"
+  },
+  {
+    "id": "Livro_039",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_2",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "existeEm": [
+      "Linha_Original_00",
+      "Linha_Alt_A"
+    ],
+    "refereEvento": "Extincao_da_Fome"
+  },
+  {
+    "id": "Livro_040",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_3",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Guerra_dos_Nanobots",
+    "existeEm": "Linha_Alt_A"
+  },
+  {
+    "id": "Livro_041",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_2",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Descobrimento_da_America",
+    "existeEm": "Linha_Original_00"
+  },
+  {
+    "id": "Livro_042",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_2",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Crise_de_1929",
+    "existeEm": "Linha_Original_00"
+  },
+  {
+    "id": "Livro_043",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_1",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "existeEm": [
+      "Linha_Original_Prime",
+      "Linha_Alt_Omega"
+    ],
+    "refereEvento": "Contato_Sirius"
+  },
+  {
+    "id": "Livro_044",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_7",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Guerra_dos_Nanobots",
+    "existeEm": "Linha_Alt_A"
+  },
+  {
+    "id": "Livro_045",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_8",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Revolucao_Industrial",
+    "existeEm": "Linha_Original_Prime"
+  },
+  {
+    "id": "Livro_046",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_6",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Contato_Sirius",
+    "existeEm": "Linha_Alt_Recursiva"
+  },
+  {
+    "id": "Livro_047",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_1",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Descobrimento_da_America",
+    "existeEm": "Linha_Original_00"
+  },
+  {
+    "id": "Livro_048",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_4",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "existeEm": [
+      "Linha_Original_00",
+      "Linha_Alt_Recursiva"
+    ],
+    "refereEvento": "Extincao_da_Fome"
+  },
+  {
+    "id": "Livro_049",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_7",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Extincao_da_Fome",
+    "existeEm": "Linha_Alt_A"
+  },
+  {
+    "id": "Livro_050",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_9",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "existeEm": [
+      "Linha_Original_00",
+      "Linha_Alt_A"
+    ],
+    "refereEvento": "Descobrimento_da_America"
+  },
+  {
+    "id": "Livro_051",
+    "tipo": "LivroHistorico",
+    "escritoPor": "Autor_2",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "refereEvento": "Primeiro_Voo",
+    "existeEm": "Linha_Original_Prime"
+  },
+  {
+    "id": "Livro_052",
+    "tipo": "LivroParadoxal",
+    "escritoPor": "Autor_3",
+    "pertenceA": "Arquivo_do_Vazio_Temporal",
+    "existeEm": [
+      "Linha_Original_00",
+      "Linha_Alt_A"
+    ],
+    "refereEvento": "Guerra_dos_Nanobots"
+  },
+  {
+    "id": "Livro_053",
+    "tipo": "LivroFiccional",
+    "escritoPor": "Autor_2",
+    "pertenceA": "Biblioteca_Central_do_Tempo",
+    "refereEvento": "Guerra_dos_Nanobots",
+    "existeEm": "Linha_Alt_Omega"
+  }
+]

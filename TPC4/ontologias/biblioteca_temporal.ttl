@@ -1,0 +1,581 @@
+@prefix : <http://rpcw.di.uminho.pt/biblioteca_temporal/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://rpcw.di.uminho.pt/biblioteca_temporal> a owl:Ontology .
+
+:Aurelio a :Bibliotecario ;
+    :trabalhaEm :Cofre_do_Tempo_Perdido .
+
+:Biblioteca_Entre_Ontem_e_Amanha a :Biblioteca,
+        owl:NamedIndividual .
+
+:Boecio a :Bibliotecario ;
+    :trabalhaEm :Biblioteca_Infinita .
+
+:Cassiodoro a :Bibliotecario ;
+    :trabalhaEm :Biblioteca_Infinita .
+
+:Empréstimo a owl:Class .
+
+:EntidadeTemporal a owl:Class ;
+    rdfs:subClassOf :Agente .
+
+:Ex_Nihilo_Nihil_Fit a :LivroParadoxal,
+        owl:NamedIndividual ;
+    :escritoPor :Cronos .
+
+:Formação_da_Via_Láctea a :EventoHistorico,
+        owl:NamedIndividual .
+
+:Gênesis a :LivroHistorico,
+        owl:NamedIndividual ;
+    :escritoPor :Cronos ;
+    :existeEm :Linha_T0,
+        :Linha_T1 ;
+    :refereEvento :Big_Bang .
+
+:Hypatia_II a :Bibliotecario ;
+    :trabalhaEm :Torre_do_Conhecimento .
+
+:Leitor_Vip_1 a :Leitor .
+
+:Leitor_Vip_10 a :Leitor .
+
+:Leitor_Vip_11 a :Leitor .
+
+:Leitor_Vip_12 a :Leitor .
+
+:Leitor_Vip_13 a :Leitor .
+
+:Leitor_Vip_14 a :Leitor .
+
+:Leitor_Vip_2 a :Leitor .
+
+:Leitor_Vip_3 a :Leitor .
+
+:Leitor_Vip_4 a :Leitor .
+
+:Leitor_Vip_5 a :Leitor .
+
+:Leitor_Vip_6 a :Leitor .
+
+:Leitor_Vip_7 a :Leitor .
+
+:Leitor_Vip_8 a :Leitor .
+
+:Leitor_Vip_9 a :Leitor .
+
+:Livro_Temporal_001 a :LivroHistorico ;
+    :escritoPor :Autor_F ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Pax_Romana .
+
+:Livro_Temporal_002 a :LivroHistorico ;
+    :escritoPor :Autor_D ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Nascimento_do_Sol .
+
+:Livro_Temporal_003 a :LivroParadoxal ;
+    :escritoPor :Autor_I ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Renascimento .
+
+:Livro_Temporal_004 a :LivroHistorico ;
+    :escritoPor :Autor_H ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Crise_das_Tulipas .
+
+:Livro_Temporal_005 a :LivroParadoxal ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Gama_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Exploracao_Espacial .
+
+:Livro_Temporal_006 a :LivroHistorico ;
+    :escritoPor :Autor_J ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Extincao_Dino .
+
+:Livro_Temporal_007 a :LivroParadoxal ;
+    :escritoPor :Autor_F ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Nascimento_do_Sol .
+
+:Livro_Temporal_008 a :LivroParadoxal ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Epsilon_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Nascimento_do_Sol .
+
+:Livro_Temporal_009 a :LivroFiccional ;
+    :escritoPor :Autor_J ;
+    :existeEm :Linha_Epsilon_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Viagem_Intergalactica .
+
+:Livro_Temporal_010 a :LivroFiccional ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Epsilon_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Viagem_Intergalactica .
+
+:Livro_Temporal_011 a :LivroParadoxal ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Extincao_Dino .
+
+:Livro_Temporal_012 a :LivroHistorico ;
+    :escritoPor :Autor_J ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Nascimento_do_Sol .
+
+:Livro_Temporal_013 a :LivroParadoxal ;
+    :escritoPor :Autor_J ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Pax_Romana .
+
+:Livro_Temporal_014 a :LivroHistorico ;
+    :escritoPor :Autor_G ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Extincao_Dino .
+
+:Livro_Temporal_015 a :LivroParadoxal ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Gama_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Fim_da_Escassez .
+
+:Livro_Temporal_016 a :LivroFiccional ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Gama_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Viagem_Intergalactica .
+
+:Livro_Temporal_017 a :LivroFiccional ;
+    :escritoPor :Autor_B ;
+    :existeEm :Linha_Gama_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Cura_da_Mortalidade .
+
+:Livro_Temporal_018 a :LivroParadoxal ;
+    :escritoPor :Autor_F ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Viagem_Intergalactica .
+
+:Livro_Temporal_019 a :LivroParadoxal ;
+    :escritoPor :Autor_H ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Epsilon_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Cura_da_Mortalidade .
+
+:Livro_Temporal_020 a :LivroHistorico ;
+    :escritoPor :Autor_D ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Exploracao_Espacial .
+
+:Livro_Temporal_021 a :LivroFiccional ;
+    :escritoPor :Autor_D ;
+    :existeEm :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Fim_da_Escassez .
+
+:Livro_Temporal_022 a :LivroHistorico ;
+    :escritoPor :Autor_D ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Nascimento_do_Sol .
+
+:Livro_Temporal_023 a :LivroHistorico ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Extincao_Dino .
+
+:Livro_Temporal_024 a :LivroHistorico ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Renascimento .
+
+:Livro_Temporal_025 a :LivroHistorico ;
+    :escritoPor :Autor_G ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Crise_das_Tulipas .
+
+:Livro_Temporal_026 a :LivroParadoxal ;
+    :escritoPor :Autor_C ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Gama_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Extincao_Dino .
+
+:Livro_Temporal_027 a :LivroHistorico ;
+    :escritoPor :Autor_F ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Crise_das_Tulipas .
+
+:Livro_Temporal_028 a :LivroHistorico ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Crise_das_Tulipas .
+
+:Livro_Temporal_029 a :LivroParadoxal ;
+    :escritoPor :Autor_F ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Pax_Romana .
+
+:Livro_Temporal_030 a :LivroParadoxal ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Gama_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Viagem_Intergalactica .
+
+:Livro_Temporal_031 a :LivroHistorico ;
+    :escritoPor :Autor_I ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Pax_Romana .
+
+:Livro_Temporal_032 a :LivroHistorico ;
+    :escritoPor :Autor_F ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Crise_das_Tulipas .
+
+:Livro_Temporal_033 a :LivroFiccional ;
+    :escritoPor :Autor_I ;
+    :existeEm :Linha_Delta_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Primeira_Cidade_Submarina .
+
+:Livro_Temporal_034 a :LivroFiccional ;
+    :escritoPor :Autor_H ;
+    :existeEm :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Fim_da_Escassez .
+
+:Livro_Temporal_035 a :LivroFiccional ;
+    :escritoPor :Autor_B ;
+    :existeEm :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Viagem_Intergalactica .
+
+:Livro_Temporal_036 a :LivroHistorico ;
+    :escritoPor :Autor_I ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Nascimento_do_Sol .
+
+:Livro_Temporal_037 a :LivroParadoxal ;
+    :escritoPor :Autor_B ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Extincao_Dino .
+
+:Livro_Temporal_038 a :LivroParadoxal ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Exploracao_Espacial .
+
+:Livro_Temporal_039 a :LivroFiccional ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Epsilon_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Primeira_Cidade_Submarina .
+
+:Livro_Temporal_040 a :LivroParadoxal ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Gama_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Nascimento_do_Sol .
+
+:Livro_Temporal_041 a :LivroParadoxal ;
+    :escritoPor :Autor_C ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Epsilon_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Cura_da_Mortalidade .
+
+:Livro_Temporal_042 a :LivroFiccional ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Epsilon_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Dominio_da_Energia_Livre .
+
+:Livro_Temporal_043 a :LivroParadoxal ;
+    :escritoPor :Autor_C ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Epsilon_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Viagem_Intergalactica .
+
+:Livro_Temporal_044 a :LivroFiccional ;
+    :escritoPor :Autor_B ;
+    :existeEm :Linha_Gama_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :IA_Autoconsfiente .
+
+:Livro_Temporal_045 a :LivroParadoxal ;
+    :escritoPor :Autor_G ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Epsilon_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :IA_Autoconsfiente .
+
+:Livro_Temporal_046 a :LivroFiccional ;
+    :escritoPor :Autor_C ;
+    :existeEm :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Cura_da_Mortalidade .
+
+:Livro_Temporal_047 a :LivroParadoxal ;
+    :escritoPor :Autor_H ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Gama_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Exploracao_Espacial .
+
+:Livro_Temporal_048 a :LivroFiccional ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Epsilon_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Viagem_Intergalactica .
+
+:Livro_Temporal_049 a :LivroFiccional ;
+    :escritoPor :Autor_J ;
+    :existeEm :Linha_Delta_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Viagem_Intergalactica .
+
+:Livro_Temporal_050 a :LivroParadoxal ;
+    :escritoPor :Autor_J ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Pax_Romana .
+
+:Morte_Térmica_do_Universo a :EventoFuturo,
+        owl:NamedIndividual .
+
+:Ptolomeu_X a :Bibliotecario ;
+    :trabalhaEm :Biblioteca_Infinita .
+
+:Zeno a :Bibliotecario ;
+    :trabalhaEm :Biblioteca_Infinita .
+
+:escritoPor a owl:ObjectProperty ;
+    rdfs:domain :Livro ;
+    rdfs:range :Autor .
+
+:nome a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+:ocorremEm a owl:ObjectProperty ;
+    rdfs:domain :Evento ;
+    rdfs:range :LinhaTemporal .
+
+:pertenceA a owl:ObjectProperty ;
+    rdfs:domain :Livro ;
+    rdfs:range :Biblioteca .
+
+:requisitam a owl:ObjectProperty ;
+    rdfs:domain :Leitor ;
+    rdfs:range :Livro .
+
+:Big_Bang a :EventoHistorico,
+        owl:NamedIndividual .
+
+:Dominio_da_Energia_Livre a :EventoFuturo .
+
+:trabalhaEm a owl:ObjectProperty ;
+    rdfs:domain :Bibliotecario ;
+    rdfs:range :Biblioteca .
+
+:Agente a owl:Class .
+
+:Cronos a :Autor,
+        :Bibliotecario,
+        owl:NamedIndividual .
+
+:IA_Autoconsfiente a :EventoFuturo .
+
+:Linha_T0 a :LinhaOriginal,
+        owl:NamedIndividual .
+
+:Linha_T1 a :LinhaAlternativa,
+        owl:NamedIndividual .
+
+:Primeira_Cidade_Submarina a :EventoFuturo .
+
+:Renascimento a :EventoHistorico .
+
+:refereEvento a owl:ObjectProperty ;
+    rdfs:domain :Livro ;
+    rdfs:range :Evento .
+
+:Autor_G a :Autor ;
+    :nome "Stanislaw Lem II" .
+
+:Fim_da_Escassez a :EventoFuturo .
+
+:Pessoa a owl:Class ;
+    rdfs:subClassOf :Agente,
+        owl:Thing .
+
+:existeEm a owl:ObjectProperty ;
+    rdfs:domain :Livro ;
+    rdfs:range :LinhaTemporal .
+
+:Autor_B a :Autor ;
+    :nome "Ursula K. Le Guin II" .
+
+:Autor_C a :Autor ;
+    :nome "Philip K. Dick II" .
+
+:Autor_D a :Autor ;
+    :nome "Jorge Luis Borges II" .
+
+:Autor_H a :Autor ;
+    :nome "Margaret Atwood II" .
+
+:Autor_I a :Autor ;
+    :nome "Arthur C. Clarke II" .
+
+:Cura_da_Mortalidade a :EventoFuturo .
+
+:Evento a owl:Class .
+
+:Exploracao_Espacial a :EventoHistorico .
+
+:Crise_das_Tulipas a :EventoHistorico .
+
+:LinhaAlternativa a owl:Class ;
+    rdfs:subClassOf :LinhaTemporal ;
+    owl:disjointWith :LinhaOriginal .
+
+:LinhaOriginal a owl:Class ;
+    rdfs:subClassOf :LinhaTemporal .
+
+:LinhaTemporal a owl:Class .
+
+:Pax_Romana a :EventoHistorico .
+
+:Autor_F a :Autor ;
+    :nome "Italo Calvino II" .
+
+:Autor_J a :Autor ;
+    :nome "H.G. Wells II" .
+
+:Extincao_Dino a :EventoHistorico .
+
+:Autor_A a :Autor ;
+    :nome "Isaac Asimov II" .
+
+:Biblioteca a owl:Class .
+
+:EventoFuturo a owl:Class ;
+    rdfs:subClassOf :Evento ;
+    owl:disjointWith :EventoHistorico .
+
+:Nascimento_do_Sol a :EventoHistorico .
+
+:Autor_E a :Autor ;
+    :nome "Octavia Butler II" .
+
+:Bibliotecario a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Biblioteca ;
+            owl:onProperty :trabalhaEm ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        :Pessoa .
+
+:Livro a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :LinhaTemporal ;
+            owl:onProperty :existeEm ] .
+
+:Linha_Gama_Alt a :LinhaAlternativa .
+
+:Viagem_Intergalactica a :EventoFuturo .
+
+:Linha_Epsilon_Alt a :LinhaAlternativa .
+
+:EventoHistorico a owl:Class ;
+    rdfs:subClassOf :Evento .
+
+:Autor a owl:Class ;
+    rdfs:subClassOf :Pessoa .
+
+:LivroFiccional a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:complementOf :EventoHistorico ] ;
+            owl:onProperty :refereEvento ],
+        :Livro ;
+    owl:disjointWith :LivroHistorico .
+
+:Leitor a owl:Class ;
+    rdfs:subClassOf :Pessoa .
+
+:Linha_Delta_Alt a :LinhaAlternativa .
+
+:Linha_Alpha_0 a :LinhaOriginal .
+
+:Biblioteca_Infinita a :Biblioteca .
+
+:LivroHistorico a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :EventoHistorico ;
+            owl:onProperty :refereEvento ],
+        :Livro .
+
+:Torre_do_Conhecimento a :Biblioteca .
+
+:Linha_Beta_0 a :LinhaOriginal .
+
+:Cofre_do_Tempo_Perdido a :Biblioteca .
+
+:LivroParadoxal a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty :existeEm ;
+                        owl:someValuesFrom :LinhaAlternativa ] [ a owl:Restriction ;
+                        owl:onProperty :existeEm ;
+                        owl:someValuesFrom :LinhaOriginal ] ) ],
+        :Livro .
+

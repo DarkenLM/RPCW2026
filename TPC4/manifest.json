@@ -1,0 +1,239 @@
+{
+    "authorName": "Rafael Santos Fernandes",
+    "authorId": "PG60298",
+    "authorPhoto": "../assets/img/foto.jpg",
+
+    "tpcNum": 3,
+    "title": "Semana 4",
+    "summary": "Este trabalho incidiu sobre a construção, povoação e exploração da ontologia 'Biblioteca Temporal'.",
+    "results": {
+        "Construção da Ontologia": [
+            {
+                "name": "Metodologia",
+                "desc": [
+                    "Foram criadas as classes conforme descritas no enunciado, pela hierarquia definida no mesmo. Por consequência desta abordagem, a classe `Pessoa` e suas subclasses estão representadas tanto como descendente direto de `owl:Thing` como de `Agente`.",
+                    "Foram também criados os indivíduos conforme descritos no enunciado, bem como os indivíduos `Big_Bang`, `Formação_da_Via_Láctea`, `Morte_Térmica_do_Universo` e `Gênesis` para testar as restrições aplicadas ás classes e propriedades de objetos.",
+                    "As propriedades de objeto foram nomeadas conforme extraído dos datasets através da ferramenta `getProps`."
+                ]
+            },
+            {
+                "name": "Limitações",
+                "desc": [
+                    "Para a construção da ontologia, foi exigido uma restrição em OWL: `Um Autor não pode ser Leitor do mesmo livro na mesma linha temporal.`.",
+                    "Esta restrição pode ser representada através da fórmula em Lógica de Primeira Ordem $$\\forall_{a} . Autor(a) \\wedge Leitor(a) \\Rightarrow \\nexists_{l,t} . Livro(l) \\wedge LinhaTemporal(t) \\wedge escritoPor(l,a) \\wedge requisitam(a,l) \\wedge existeEm(l,t) \\wedge autorouEm(a,t)$$.",
+                    "Esta é uma relação ternária que é, porém, impossível de resolver em Lógica Descritiva, dado existirem co-referências entre as variáveis em dois ramos diferentes da fórmula nos últimos dois predicados da mesma, que são avaliados separadamente (i.e. $existeEm(l,t) \\wedge autorouEm(a,t)$ é interpretado como *$l$ existeEm* ***qualquer uma*** *linha temporal $t_1$, e $a$ autorouEm* ***qualquer uma*** *linha temporal $t_2$*, o que não garante que $t_1$ e $t_2$ representem a mesma linha temporal.)",
+                    "Para representar esta fórmula seria necessário o uso de um sistema que permita o uso de Cláusulas de Horn, como SWRL ou SHACL."
+                ]
+            },
+            {
+                "name": "Resultado",
+                "file": "./ontologias/biblioteca_temporal_base.ttl",
+                "desc": [
+                    "Contém a estrutura base da ontologia, sem nenhum dado da população, que será utilizado pela fase seguinte para gerar o ficheiro TTL final contendo a intologia finalizada."
+                ]
+            }
+        ],
+        "Scripts de Utilitário": [
+            {
+                "name": "getProps.py",
+                "file": "./scripts/getProps.py",
+                "desc": [
+                    "Criado para extraír metainformação de um dado ficheiro de população, dado que as chaves das propriedades de objeto presentes nos ficheiros de população fornecidos diferem das chaves mencionadas no enunciado. Dada a diferença, foi criada a ferramenta para rápida e fácilmente adaptar a ontologia base para aceitar os indivíduos dos mesmos.",
+                    "Esta ferramenta extraí as seguintes metainformações:",
+                    "- Quais as classes utilizadas pelos indivíduos.",
+                    "- Quais as propriedades de objeto utilizadas pelos indivíduos.",
+                    "- Quais os possíveis valores para uma dada propriedade de objeto de entre todos os indivíduos que a declarem."
+                ]
+            },
+            {
+                "name": "populate.py",
+                "file": "./scripts/populate.py",
+                "desc": [
+                    "Criado para extraír e adicionar indivíduos a uma dada ontologia base a partir de um dado ficheiro de população, em JSON.",
+                    "Esta ferramenta utiliza a biblioteca rdflib para ler, processar e gravar as ontologias, tanto em XML ou TTL (configurável)."
+                ]
+            },
+            {
+                "name": "populate.sh",
+                "file": "./populate.sh",
+                "desc": "Script de bash para popular automaticamente a ontologia base com o ficheiro de população `dataset_temporal_v2_100.json`"
+            }
+        ],
+        "Queries SPARQL": [
+            {
+                "name": " Liste todos os livros que existem na linha temporal original (LinhaOriginal).",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT * WHERE {",
+                    "    ?linha a :LinhaOriginal .",
+                    "    ?livro a :Livro ;",
+                    "       :existeEm ?linha .",
+                    "   ",
+                    "}",
+                    "```"
+                ]
+            },
+            {
+                "name": " Identifique os livros que existem em mais do que uma linha temporal.",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT ?livro (COUNT(?linha) AS ?numLinhas) WHERE {",
+                    "    ?linha a :LinhaTemporal .",
+                    "    ?livro a :Livro ;",
+                    "       :existeEm ?linha .",
+                    "   ",
+                    "}",
+                    "GROUP BY ?livro",
+                    "HAVING (?numLinhas > 1)",
+                    "ORDER BY DESC(?numLinhas)",
+                    "```"
+                ]
+            },
+            {
+                "name": " Liste todos os livros classificados como LivroParadoxal.",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT ?livro WHERE {",
+                    "    ?livro a :LivroParadoxal ;",
+                    "}",
+                    "```"
+                ]
+            },
+            {
+                "name": " Para cada LivroHistorico, indique os eventos históricos que esse livro refere.",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT ?livro ?evento WHERE {",
+                    "    ?livro a :LivroHistorico ;",
+                    "           :refereEvento ?evento .",
+                    "}",
+                    "```"
+                ]
+            },
+            {
+                "name": " Identifique livros classificados como LivroHistorico que referem eventos futuros.",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT ?livro ?evento WHERE {",
+                    "    ?livro a :LivroHistorico ;",
+                    "           :refereEvento ?evento .",
+                    "    ?evento a :EventoFuturo",
+                    "}",
+                    "```"
+                ]
+            },
+            {
+                "name": " Liste os autores e o número de livros que escreveram, ordenando o resultado por número de livros em ordem decrescente.",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT ?autor ?nomeAutor (COUNT(?livro) AS ?numLivros) WHERE {",
+                    "    ?livro :escritoPor ?autor .",
+                    "    OPTIONAL { ?autor :nome ?nomeAutor }",
+                    "}",
+                    "GROUP BY ?autor ?nomeAutor",
+                    "ORDER BY DESC(?numLivros) ",
+                    "```"
+                ]
+            },
+            {
+                "name": " Identifique os autores que escreveram pelo menos um livro paradoxal.",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT ?autor ?nomeAutor WHERE {",
+                    "    ?_livro :escritoPor ?autor .",
+                    "    ?_livro a :LivroParadoxal .",
+                    "    OPTIONAL { ?autor :nome ?nomeAutor . }",
+                    "}",
+                    "```"
+                ]
+            },
+            {
+                "name": " Liste todos os livros que existem em pelo menos uma linha temporal alternativa (LinhaAlternativa).",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT DISTINCT ?livro WHERE {",
+                    "    ?_linha a :LinhaAlternativa .",
+                    "    ?livro a :Livro ;",
+                    "           :existeEm ?_linha .",
+                    "}",
+                    "```"
+                ]
+            },
+            {
+                "name": " Indique todos os bibliotecários e a biblioteca onde trabalham.",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT ?bibliotecário ?biblioteca WHERE {",
+                    "    ?bibliotecário :trabalhaEm ?biblioteca .",
+                    "}",
+                    "```"
+                ]
+            },
+            {
+                "name": " Liste todos os livros escritos por Cronos e indique em que linhas temporais esses livros existem.",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT ?livro ?linha WHERE {",
+                    "    ?livro :escritoPor :Cronos ;",
+                    "           :existeEm ?linha",
+                    "}",
+                    "ORDER BY ?livro",
+                    "```"
+                ]
+            },
+            {
+                "name": " Identifique livros que não referem nenhum evento.",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT ?livro (COUNT(?evento) AS ?numEventos) WHERE {",
+                    "    ?livro a :Livro .",
+                    "    OPTIONAL { ?livro :refereEvento ?evento . }",
+                    "}",
+                    "GROUP BY ?livro",
+                    "HAVING (?numEventos = 0)",
+                    "ORDER BY ?livro",
+                    "```"
+                ]
+            },
+            {
+                "name": " Verifique se existe algum livro sem linha temporal associada.",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT ?livro (COUNT(?linha) AS ?numLinhas) WHERE {",
+                    "    ?livro a :Livro .",
+                    "    OPTIONAL { ?livro :existeEm ?linha . }",
+                    "}",
+                    "GROUP BY ?livro",
+                    "HAVING (?numLinhas = 0)",
+                    "ORDER BY ?livro",
+                    "```"
+                ]
+            },
+            {
+                "name": " Identifique autores que sejam também leitores (caso essa propriedade esteja modelada).",
+                "desc": [
+                    "```sparql",
+                    "PREFIX : <http://rpcw.di.uminho.pt/biblioteca_temporal/>",
+                    "SELECT ?pessoa",
+                    "WHERE {",
+                    "    ?pessoa a :Autor .",
+                    "    ?pessoa a :Leitor .",
+                    "}",
+                    "```"
+                ]
+            }
+        ]
+    }
+}
