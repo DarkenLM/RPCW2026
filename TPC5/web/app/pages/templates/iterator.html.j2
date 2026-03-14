@@ -1,0 +1,55 @@
+{% extends "base.html.j2" %}
+
+{% macro solveAnchor(anchor, e) -%}
+    {% if (util.isinstance(anchor, util.types.str)) %}
+        {{ anchor }}
+    {% else %}
+        {{ anchor(e) }}
+    {% endif %}
+{%- endmacro %}
+
+{% macro maybeListTD(val, anchor = None) -%}
+    <td>
+    {% if (util.isinstance(val, util.types.list)) %}
+        <div class="multiline">
+            {% for e in val %}
+                {% if (anchor != None) %}
+                    <a href="{{ solveAnchor(anchor, e) }}">{{ maybeRDF(e) }}</a>
+                {% else %}
+                    <span>{{ maybeRDF(e) }}</span>
+                {% endif %}
+            {% endfor %}
+            </div>
+    {% else %}
+        {% if (anchor != None) %}
+            <a href="{{ anchor }}">{{ maybeRDF(val) }}</a>
+        {% else %}
+            {{ maybeRDF(val) }}
+        {% endif %}
+    {% endif %}
+    </td>
+{%- endmacro %}
+
+{% block body %}
+<table class="iteratorTable">
+    <thead>
+        <tr>
+            {% for h in tableHeaders %}
+                <th>{{ h[1] }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for e in tableBody %}
+        <tr>
+            {% for h in tableHeaders %}
+                {% set el = e.get(h[0], "N/A") %} 
+                {% set _el_ltm = tableMeta.get("_linkTorwards", {}) %} 
+                {% set el_lt = e.get("_linkTorwards", _el_ltm.get(e.get("__id__", None), _el_ltm.get("*", None))) %}
+                {{ maybeListTD(el, el_lt['to'](e) if (el_tl != None and (h[0] in el_lt["from"])) else None) }}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock body %}

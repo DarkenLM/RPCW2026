@@ -1,0 +1,1389 @@
+@prefix : <http://example.org/biblioteca-temporal#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Arnaldo a :Bibliotecario ;
+    :trabalhaEm :Biblioteca_Central_do_Tempo .
+
+:Aurelio a :Bibliotecario ;
+    :trabalhaEm :Cofre_do_Tempo_Perdido .
+
+:Aurora a :Bibliotecario ;
+    :trabalhaEm :Biblioteca_Entre_Ontem_e_Amanha .
+
+:BibliotecaTemporalOntology a owl:Ontology .
+
+:Boecio a :Bibliotecario ;
+    :trabalhaEm :Biblioteca_Infinita .
+
+:Cassiodoro a :Bibliotecario ;
+    :trabalhaEm :Biblioteca_Infinita .
+
+:Clarice a :Bibliotecario ;
+    :trabalhaEm :Arquivo_do_Vazio_Temporal .
+
+:Dante_B a :Bibliotecario ;
+    :trabalhaEm :Biblioteca_Central_do_Tempo .
+
+:EntidadeTemporal a owl:Class .
+
+:Eustachio a :Bibliotecario ;
+    :trabalhaEm :Arquivo_do_Vazio_Temporal .
+
+:Hypatia_II a :Bibliotecario ;
+    :trabalhaEm :Torre_do_Conhecimento .
+
+:Leitor_1 a :Leitor .
+
+:Leitor_10 a :Leitor .
+
+:Leitor_11 a :Leitor .
+
+:Leitor_12 a :Leitor .
+
+:Leitor_13 a :Leitor .
+
+:Leitor_14 a :Leitor .
+
+:Leitor_15 a :Leitor .
+
+:Leitor_2 a :Leitor .
+
+:Leitor_3 a :Leitor .
+
+:Leitor_4 a :Leitor .
+
+:Leitor_5 a :Leitor .
+
+:Leitor_6 a :Leitor .
+
+:Leitor_7 a :Leitor .
+
+:Leitor_8 a :Leitor .
+
+:Leitor_9 a :Leitor .
+
+:Leitor_Vip_1 a :Leitor .
+
+:Leitor_Vip_10 a :Leitor .
+
+:Leitor_Vip_11 a :Leitor .
+
+:Leitor_Vip_12 a :Leitor .
+
+:Leitor_Vip_13 a :Leitor .
+
+:Leitor_Vip_14 a :Leitor .
+
+:Leitor_Vip_2 a :Leitor .
+
+:Leitor_Vip_3 a :Leitor .
+
+:Leitor_Vip_4 a :Leitor .
+
+:Leitor_Vip_5 a :Leitor .
+
+:Leitor_Vip_6 a :Leitor .
+
+:Leitor_Vip_7 a :Leitor .
+
+:Leitor_Vip_8 a :Leitor .
+
+:Leitor_Vip_9 a :Leitor .
+
+:Livro_001 a :LivroParadoxal ;
+    :escritoPor :Autor_10 ;
+    :existeEm :Linha_Alt_Omega,
+        :Linha_Original_00 ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Queda_do_Muro ;
+    :titulo "O Fim da Eternidade" .
+
+:Livro_002 a :LivroParadoxal ;
+    :escritoPor :Autor_4 ;
+    :existeEm :Linha_Alt_A,
+        :Linha_Original_Prime ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Queda_do_Muro ;
+    :titulo "Ubik" .
+
+:Livro_003 a :LivroFiccional ;
+    :escritoPor :Autor_4 ;
+    :existeEm :Linha_Alt_A ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Nascimento_da_IA ;
+    :titulo "Do Androids Dream of Electric Sheep?" .
+
+:Livro_004 a :LivroHistorico ;
+    :escritoPor :Autor_5 ;
+    :existeEm :Linha_Original_Prime ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Descobrimento_da_America ;
+    :titulo "Fundação" .
+
+:Livro_005 a :LivroFiccional ;
+    :escritoPor :Autor_10 ;
+    :existeEm :Linha_Alt_Recursiva ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Explosao_Solar_2100 ;
+    :titulo "Solaris" .
+
+:Livro_006 a :LivroFiccional ;
+    :escritoPor :Autor_9 ;
+    :existeEm :Linha_Alt_A ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Explosao_Solar_2100 ;
+    :titulo "2001: Odisseia no Espaço" .
+
+:Livro_007 a :LivroParadoxal ;
+    :escritoPor :Autor_5 ;
+    :existeEm :Linha_Alt_A,
+        :Linha_Original_00 ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Queda_do_Muro ;
+    :titulo "Eu, Robot" .
+
+:Livro_008 a :LivroFiccional ;
+    :escritoPor :Autor_4 ;
+    :existeEm :Linha_Alt_A ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Extincao_da_Fome ;
+    :titulo "O Homem no Castelo Alto" .
+
+:Livro_009 a :LivroParadoxal ;
+    :escritoPor :Autor_2 ;
+    :existeEm :Linha_Alt_Recursiva,
+        :Linha_Original_Prime ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Explosao_Solar_2100 ;
+    :titulo "A Mão Esquerda das Trevas" .
+
+:Livro_010 a :LivroFiccional ;
+    :escritoPor :Autor_10 ;
+    :existeEm :Linha_Alt_Recursiva ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Nascimento_da_IA ;
+    :titulo "Ciberíada" .
+
+:Livro_011 a :LivroHistorico ;
+    :escritoPor :Autor_6 ;
+    :existeEm :Linha_Original_Prime ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Invencao_Internet,
+        :Revolucao_Industrial ;
+    :titulo "A Máquina do Tempo e o Vapor" .
+
+:Livro_012 a :LivroFiccional ;
+    :escritoPor :Autor_9 ;
+    :existeEm :Linha_Alt_A ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Explosao_Solar_2100,
+        :Primeiro_Contacto ;
+    :titulo "Vozes do Espaço Profundo" .
+
+:Livro_013 a :LivroParadoxal ;
+    :escritoPor :Autor_9 ;
+    :existeEm :Linha_Alt_Recursiva,
+        :Linha_Original_Prime ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Guerra_dos_Nanobots ;
+    :titulo "Micromundo: A Guerra Invisível" .
+
+:Livro_014 a :LivroParadoxal ;
+    :escritoPor :Autor_3 ;
+    :existeEm :Linha_Alt_Omega,
+        :Linha_Original_Prime ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Crise_de_1929 ;
+    :titulo "Economia em Colapso" .
+
+:Livro_015 a :LivroParadoxal ;
+    :escritoPor :Autor_10 ;
+    :existeEm :Linha_Alt_A,
+        :Linha_Original_00 ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Queda_do_Muro ;
+    :titulo "Fragmentos do Muro" .
+
+:Livro_016 a :LivroParadoxal ;
+    :escritoPor :Autor_2 ;
+    :existeEm :Linha_Alt_Recursiva,
+        :Linha_Original_Prime ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Chegada_Marte,
+        :Explosao_Solar_2100 ;
+    :titulo "Crónicas de Marte" .
+
+:Livro_017 a :LivroFiccional ;
+    :escritoPor :Autor_7 ;
+    :existeEm :Linha_Alt_A ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Guerra_dos_Nanobots ;
+    :titulo "O Homem Invisível e Outras Máquinas" .
+
+:Livro_018 a :LivroHistorico ;
+    :escritoPor :Autor_9 ;
+    :existeEm :Linha_Original_00 ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Crise_de_1929 ;
+    :titulo "Relatório de 1929" .
+
+:Livro_019 a :LivroFiccional ;
+    :escritoPor :Autor_1 ;
+    :existeEm :Linha_Alt_A ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Explosao_Solar_2100 ;
+    :titulo "Mensagem das Estrelas" .
+
+:Livro_020 a :LivroFiccional ;
+    :escritoPor :Autor_5 ;
+    :existeEm :Linha_Alt_Recursiva ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Nascimento_da_IA,
+        :Singularidade_IA ;
+    :titulo "Eu, Autómato" .
+
+:Livro_021 a :LivroHistorico ;
+    :escritoPor :Autor_7 ;
+    :existeEm :Linha_Original_Prime ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Revolucao_Industrial ;
+    :titulo "A Revolução das Engrenagens" .
+
+:Livro_022 a :LivroFiccional ;
+    :escritoPor :Autor_9 ;
+    :existeEm :Linha_Alt_A ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Nascimento_da_IA ;
+    :titulo "Sentinela do Infinito" .
+
+:Livro_023 a :LivroParadoxal ;
+    :escritoPor :Autor_8 ;
+    :existeEm :Linha_Alt_A,
+        :Linha_Original_Prime ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Cidades_Subaquaticas,
+        :Explosao_Solar_2100 ;
+    :titulo "Vinte Mil Léguas sob o Tempo" .
+
+:Livro_024 a :LivroHistorico ;
+    :escritoPor :Autor_2 ;
+    :existeEm :Linha_Original_Prime ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Revolucao_Industrial ;
+    :titulo "Caminhos do Ferro" .
+
+:Livro_025 a :LivroParadoxal ;
+    :escritoPor :Autor_5 ;
+    :existeEm :Linha_Alt_Omega,
+        :Linha_Original_Prime ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Revolucao_Industrial ;
+    :titulo "O Robô da Meia-Noite" .
+
+:Livro_026 a :LivroHistorico ;
+    :escritoPor :Autor_5 ;
+    :existeEm :Linha_Original_Prime ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Descobrimento_da_America ;
+    :titulo "O Sol Nu" .
+
+:Livro_027 a :LivroHistorico ;
+    :escritoPor :Autor_6 ;
+    :existeEm :Linha_Original_00 ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Guerra_Fria,
+        :Queda_do_Muro ;
+    :titulo "O Dia em que o Muro Caiu" .
+
+:Livro_028 a :LivroHistorico ;
+    :escritoPor :Autor_4 ;
+    :existeEm :Linha_Original_Prime ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Queda_do_Muro ;
+    :titulo "Realidades Alternadas" .
+
+:Livro_029 a :LivroFiccional ;
+    :escritoPor :Autor_7 ;
+    :existeEm :Linha_Alt_A ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Guerra_dos_Nanobots ;
+    :titulo "Guerra dos Mundos" .
+
+:Livro_030 a :LivroFiccional ;
+    :escritoPor :Autor_1 ;
+    :existeEm :Linha_Alt_Omega ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Contato_Sirius ;
+    :titulo "O Guardador de Rebanhos Temporais" .
+
+:Livro_031 a :LivroParadoxal ;
+    :escritoPor :Autor_2 ;
+    :existeEm :Linha_Alt_Omega,
+        :Linha_Original_00 ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Crise_de_1929 ;
+    :titulo "Pedra Filosofal e o Crash" .
+
+:Livro_032 a :LivroHistorico ;
+    :escritoPor :Autor_8 ;
+    :existeEm :Linha_Original_00 ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Dobra_Espacial,
+        :Revolucao_Industrial ;
+    :titulo "Viagem ao Centro do Tempo" .
+
+:Livro_033 a :LivroFiccional ;
+    :escritoPor :Autor_9 ;
+    :existeEm :Linha_Alt_A ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Guerra_dos_Nanobots ;
+    :titulo "A Cidade e as Estrelas" .
+
+:Livro_034 a :LivroParadoxal ;
+    :escritoPor :Autor_9 ;
+    :existeEm :Linha_Alt_A,
+        :Linha_Original_00 ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Crise_de_1929 ;
+    :titulo "Odisseia de Ontem" .
+
+:Livro_035 a :LivroHistorico ;
+    :escritoPor :Autor_2 ;
+    :existeEm :Linha_Original_00 ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Crise_de_1929,
+        :Revolucao_Francesa ;
+    :titulo "A Ordem de Fénix Histórica" .
+
+:Livro_036 a :LivroParadoxal ;
+    :escritoPor :Autor_7 ;
+    :existeEm :Linha_Alt_Recursiva,
+        :Linha_Original_00 ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Guerra_dos_Nanobots ;
+    :titulo "Primeiros Homens na Lua" .
+
+:Livro_037 a :LivroParadoxal ;
+    :escritoPor :Autor_6 ;
+    :existeEm :Linha_Alt_A,
+        :Linha_Original_00 ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Extincao_da_Fome ;
+    :titulo "Mão Esquerda das Trevas II" .
+
+:Livro_038 a :LivroFiccional ;
+    :escritoPor :Autor_3 ;
+    :existeEm :Linha_Alt_Recursiva ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Explosao_Solar_2100 ;
+    :titulo "1984: O Futuro" .
+
+:Livro_039 a :LivroParadoxal ;
+    :escritoPor :Autor_2 ;
+    :existeEm :Linha_Alt_A,
+        :Linha_Original_00 ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Extincao_da_Fome ;
+    :titulo "Câmara dos Segredos Temporais" .
+
+:Livro_040 a :LivroFiccional ;
+    :escritoPor :Autor_3 ;
+    :existeEm :Linha_Alt_A ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Guerra_dos_Nanobots ;
+    :titulo "Revolução dos Bichos Futuristas" .
+
+:Livro_041 a :LivroHistorico ;
+    :escritoPor :Autor_2 ;
+    :existeEm :Linha_Original_00 ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Descobrimento_da_America ;
+    :titulo "O Prisioneiro de Azkaban Original" .
+
+:Livro_042 a :LivroHistorico ;
+    :escritoPor :Autor_2 ;
+    :existeEm :Linha_Original_00 ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Crise_de_1929 ;
+    :titulo "O Cálice de Fogo e Cinzas" .
+
+:Livro_043 a :LivroParadoxal ;
+    :escritoPor :Autor_1 ;
+    :existeEm :Linha_Alt_Omega,
+        :Linha_Original_Prime ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Contato_Sirius,
+        :Renascimento_Italiano ;
+    :titulo "Livro do Desassossego Galáctico" .
+
+:Livro_044 a :LivroFiccional ;
+    :escritoPor :Autor_7 ;
+    :existeEm :Linha_Alt_A ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Guerra_dos_Nanobots ;
+    :titulo "A Ilha do Dr. Moreau" .
+
+:Livro_045 a :LivroHistorico ;
+    :escritoPor :Autor_8 ;
+    :existeEm :Linha_Original_Prime ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Revolucao_Industrial ;
+    :titulo "Da Terra à Lua: Factos" .
+
+:Livro_046 a :LivroFiccional ;
+    :escritoPor :Autor_6 ;
+    :existeEm :Linha_Alt_Recursiva ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Contato_Sirius ;
+    :titulo "Planeta dos Descontentes" .
+
+:Livro_047 a :LivroHistorico ;
+    :escritoPor :Autor_1 ;
+    :existeEm :Linha_Original_00 ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Batalha_Aljubarrota,
+        :Descobrimento_da_America ;
+    :titulo "Ode Triunfal aos Descobrimentos" .
+
+:Livro_048 a :LivroParadoxal ;
+    :escritoPor :Autor_4 ;
+    :existeEm :Linha_Alt_Recursiva,
+        :Linha_Original_00 ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Cura_Alzheimer,
+        :Extincao_da_Fome,
+        :Peste_Negra ;
+    :titulo "Valis: A Fome Zero" .
+
+:Livro_049 a :LivroFiccional ;
+    :escritoPor :Autor_7 ;
+    :existeEm :Linha_Alt_A ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Extincao_da_Fome ;
+    :titulo "Máquina de Parar o Mundo" .
+
+:Livro_050 a :LivroParadoxal ;
+    :escritoPor :Autor_9 ;
+    :existeEm :Linha_Alt_A,
+        :Linha_Original_00 ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Descobrimento_da_America ;
+    :titulo "Rama II: O Descobrimento" .
+
+:Livro_051 a :LivroHistorico ;
+    :escritoPor :Autor_2 ;
+    :existeEm :Linha_Original_Prime ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Primeiro_Voo ;
+    :titulo "Relíquias da Morte Original" .
+
+:Livro_052 a :LivroParadoxal ;
+    :escritoPor :Autor_3 ;
+    :existeEm :Linha_Alt_A,
+        :Linha_Original_00 ;
+    :pertenceA :Arquivo_do_Vazio_Temporal ;
+    :refereEvento :Guerra_dos_Nanobots ;
+    :titulo "Homenagem à Catalunha Futura" .
+
+:Livro_053 a :LivroFiccional ;
+    :escritoPor :Autor_2 ;
+    :existeEm :Linha_Alt_Omega ;
+    :pertenceA :Biblioteca_Central_do_Tempo ;
+    :refereEvento :Guerra_dos_Nanobots ;
+    :titulo "Animais Fantásticos e o Nano-Amanhã" .
+
+:Livro_Autobiografia_Impossivel a :LivroFiccional ;
+    :escritoPor :Marco ;
+    :existeEm :Linha_T2 ;
+    :pertenceA :Biblioteca_Entre_Ontem_e_Amanha ;
+    :titulo "Autobiografia de um Viajante" .
+
+:Livro_Ecos_do_Amanha a :LivroFiccional,
+        :LivroParadoxal ;
+    :escritoPor :Helena ;
+    :existeEm :Linha_T3,
+        :Linha_T4 ;
+    :pertenceA :Biblioteca_Entre_Ontem_e_Amanha ;
+    :refereEvento :Singularidade_Tecnologica ;
+    :titulo "Ecos do Amanhã" .
+
+:Livro_Historia_Alternativa a :LivroHistorico ;
+    :escritoPor :Beatriz ;
+    :existeEm :Linha_T1 ;
+    :pertenceA :Biblioteca_Entre_Ontem_e_Amanha ;
+    :refereEvento :Guerra_dos_Tres_Reinos .
+
+:Livro_Imperios_Antigos a :LivroHistorico ;
+    :escritoPor :Helena ;
+    :existeEm :Linha_T0 ;
+    :pertenceA :Biblioteca_Entre_Ontem_e_Amanha ;
+    :refereEvento :Queda_do_Imperio ;
+    :titulo "Impérios Antigos e Quedas" .
+
+:Livro_Origens_da_Civilizacao a :LivroHistorico ;
+    :escritoPor :Beatriz ;
+    :existeEm :Linha_T0 ;
+    :pertenceA :Biblioteca_Entre_Ontem_e_Amanha ;
+    :refereEvento :Descoberta_do_Fogo ;
+    :titulo "Origens da Civilização" .
+
+:Livro_Paradoxo a :LivroHistorico,
+        :LivroParadoxal ;
+    :escritoPor :Cronos ;
+    :existeEm :Linha_T0,
+        :Linha_T1 ;
+    :titulo "O Paradoxo de Ontem" .
+
+:Livro_Paradoxo_Maximo a :LivroHistorico ;
+    :escritoPor :Cronos ;
+    :existeEm :Linha_T0 ;
+    :pertenceA :Biblioteca_Entre_Ontem_e_Amanha ;
+    :refereEvento :Singularidade_Tecnologica ;
+    :titulo "O Paradoxo Máximo do Futuro" .
+
+:Livro_Temporal_001 a :LivroHistorico ;
+    :escritoPor :Autor_F ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Pax_Romana ;
+    :titulo "As Cidades Invisíveis" .
+
+:Livro_Temporal_002 a :LivroHistorico ;
+    :escritoPor :Autor_D ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Nascimento_do_Sol ;
+    :titulo "O Aleph" .
+
+:Livro_Temporal_003 a :LivroParadoxal ;
+    :escritoPor :Autor_I ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Renascimento ;
+    :titulo "Encontro com Rama" .
+
+:Livro_Temporal_004 a :LivroHistorico ;
+    :escritoPor :Autor_H ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Crise_das_Tulipas ;
+    :titulo "O Conto da Aia" .
+
+:Livro_Temporal_005 a :LivroParadoxal ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Gama_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Exploracao_Espacial ;
+    :titulo "Eu, Robô II" .
+
+:Livro_Temporal_006 a :LivroHistorico ;
+    :escritoPor :Autor_J ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Extincao_Dino,
+        :Tratado_Tordesilhas ;
+    :titulo "A Máquina de Wells" .
+
+:Livro_Temporal_007 a :LivroParadoxal ;
+    :escritoPor :Autor_F ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Nascimento_do_Sol ;
+    :titulo "Cidades Invisíveis: Roma" .
+
+:Livro_Temporal_008 a :LivroParadoxal ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Epsilon_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Nascimento_do_Sol ;
+    :titulo "Kindred: Laços de Sangue" .
+
+:Livro_Temporal_009 a :LivroFiccional ;
+    :escritoPor :Autor_J ;
+    :existeEm :Linha_Epsilon_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Viagem_Intergalactica ;
+    :titulo "Guerra dos Mundos II" .
+
+:Livro_Temporal_010 a :LivroFiccional ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Epsilon_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Transferencia_Consciencia,
+        :Viagem_Intergalactica ;
+    :titulo "Xenogénese" .
+
+:Livro_Temporal_011 a :LivroParadoxal ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Extincao_Dino ;
+    :titulo "As Cavernas de Aço" .
+
+:Livro_Temporal_012 a :LivroHistorico ;
+    :escritoPor :Autor_J ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Nascimento_do_Sol ;
+    :titulo "Primeiros Homens na Lua II" .
+
+:Livro_Temporal_013 a :LivroParadoxal ;
+    :escritoPor :Autor_J ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Pax_Romana ;
+    :titulo "A Ilha do Dr. Moreau" .
+
+:Livro_Temporal_014 a :LivroHistorico ;
+    :escritoPor :Autor_G ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Extincao_Dino,
+        :Primeiro_Contacto ;
+    :titulo "Solaris II" .
+
+:Livro_Temporal_015 a :LivroParadoxal ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Gama_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Fim_da_Escassez ;
+    :titulo "O Fim da Eternidade II" .
+
+:Livro_Temporal_016 a :LivroFiccional ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Gama_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Viagem_Intergalactica ;
+    :titulo "Parábola do Semeador" .
+
+:Livro_Temporal_017 a :LivroFiccional ;
+    :escritoPor :Autor_B ;
+    :existeEm :Linha_Gama_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Cura_da_Mortalidade ;
+    :titulo "A Mão Esquerda das Trevas" .
+
+:Livro_Temporal_018 a :LivroParadoxal ;
+    :escritoPor :Autor_F ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Renascimento_Italiano,
+        :Viagem_Intergalactica ;
+    :titulo "O Barão Trepador" .
+
+:Livro_Temporal_019 a :LivroParadoxal ;
+    :escritoPor :Autor_H ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Epsilon_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Cura_da_Mortalidade ;
+    :titulo "O Conto da Aia II" .
+
+:Livro_Temporal_020 a :LivroHistorico ;
+    :escritoPor :Autor_D ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Exploracao_Espacial ;
+    :titulo "Ficções" .
+
+:Livro_Temporal_021 a :LivroFiccional ;
+    :escritoPor :Autor_D ;
+    :existeEm :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Fim_da_Escassez ;
+    :titulo "O Livro de Areia" .
+
+:Livro_Temporal_022 a :LivroHistorico ;
+    :escritoPor :Autor_D ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Colonia_Lunar,
+        :Nascimento_do_Sol ;
+    :titulo "O Aleph II" .
+
+:Livro_Temporal_023 a :LivroHistorico ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Extincao_Dino ;
+    :titulo "Fundação e Império" .
+
+:Livro_Temporal_024 a :LivroHistorico ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Renascimento ;
+    :titulo "Segunda Fundação" .
+
+:Livro_Temporal_025 a :LivroHistorico ;
+    :escritoPor :Autor_G ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Crise_das_Tulipas ;
+    :titulo "Ciberíada II" .
+
+:Livro_Temporal_026 a :LivroParadoxal ;
+    :escritoPor :Autor_C ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Gama_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Extincao_Dino ;
+    :titulo "Ubik II" .
+
+:Livro_Temporal_027 a :LivroHistorico ;
+    :escritoPor :Autor_F ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Crise_das_Tulipas ;
+    :titulo "O Cavaleiro Inexistente" .
+
+:Livro_Temporal_028 a :LivroHistorico ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Crise_das_Tulipas,
+        :Cura_Alzheimer ;
+    :titulo "Parábola dos Talentos" .
+
+:Livro_Temporal_029 a :LivroParadoxal ;
+    :escritoPor :Autor_F ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Pax_Romana ;
+    :titulo "O Visconde Cortado ao Meio" .
+
+:Livro_Temporal_030 a :LivroParadoxal ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Gama_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Viagem_Intergalactica ;
+    :titulo "Fundação II" .
+
+:Livro_Temporal_031 a :LivroHistorico ;
+    :escritoPor :Autor_I ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Pax_Romana ;
+    :titulo "Odisseia 2010" .
+
+:Livro_Temporal_032 a :LivroHistorico ;
+    :escritoPor :Autor_F ;
+    :existeEm :Linha_Alpha_0 ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Crise_das_Tulipas ;
+    :titulo "Se um Viajante numa Noite de Inverno" .
+
+:Livro_Temporal_033 a :LivroFiccional ;
+    :escritoPor :Autor_I ;
+    :existeEm :Linha_Delta_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Primeira_Cidade_Submarina,
+        :Singularidade_IA ;
+    :titulo "O Fim da Infância" .
+
+:Livro_Temporal_034 a :LivroFiccional ;
+    :escritoPor :Autor_H ;
+    :existeEm :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Fim_da_Escassez ;
+    :titulo "O Testamento de Offred" .
+
+:Livro_Temporal_035 a :LivroFiccional ;
+    :escritoPor :Autor_B ;
+    :existeEm :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Viagem_Intergalactica ;
+    :titulo "Os Despossuídos" .
+
+:Livro_Temporal_036 a :LivroHistorico ;
+    :escritoPor :Autor_I ;
+    :existeEm :Linha_Beta_0 ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Nascimento_do_Sol ;
+    :titulo "As Fontes do Paraíso" .
+
+:Livro_Temporal_037 a :LivroParadoxal ;
+    :escritoPor :Autor_B ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Extincao_Dino ;
+    :titulo "Um Mundo Devastado" .
+
+:Livro_Temporal_038 a :LivroParadoxal ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Colonia_Lunar,
+        :Exploracao_Espacial ;
+    :titulo "Semente de Estrela" .
+
+:Livro_Temporal_039 a :LivroFiccional ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Epsilon_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Primeira_Cidade_Submarina ;
+    :titulo "Amanhã Mais Além" .
+
+:Livro_Temporal_040 a :LivroParadoxal ;
+    :escritoPor :Autor_A ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Gama_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Nascimento_do_Sol ;
+    :titulo "O Sol Nu II" .
+
+:Livro_Temporal_041 a :LivroParadoxal ;
+    :escritoPor :Autor_C ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Epsilon_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Cura_da_Mortalidade ;
+    :titulo "O Homem no Castelo Alto II" .
+
+:Livro_Temporal_042 a :LivroFiccional ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Epsilon_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Dominio_da_Energia_Livre ;
+    :titulo "Despertar" .
+
+:Livro_Temporal_043 a :LivroParadoxal ;
+    :escritoPor :Autor_C ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Epsilon_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Viagem_Intergalactica ;
+    :titulo "Do Androids Dream of Electric Sheep? II" .
+
+:Livro_Temporal_044 a :LivroFiccional ;
+    :escritoPor :Autor_B ;
+    :existeEm :Linha_Gama_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :IA_Autoconsfiente,
+        :Peste_Negra ;
+    :titulo "A Curva do Tempo" .
+
+:Livro_Temporal_045 a :LivroParadoxal ;
+    :escritoPor :Autor_G ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Epsilon_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Batalha_Aljubarrota,
+        :IA_Autoconsfiente,
+        :Transferencia_Consciencia ;
+    :titulo "Um Amigo de Kafka" .
+
+:Livro_Temporal_046 a :LivroFiccional ;
+    :escritoPor :Autor_C ;
+    :existeEm :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Cura_da_Mortalidade ;
+    :titulo "Fluam, Minhas Lágrimas, Disse o Policial" .
+
+:Livro_Temporal_047 a :LivroParadoxal ;
+    :escritoPor :Autor_H ;
+    :existeEm :Linha_Beta_0,
+        :Linha_Gama_Alt ;
+    :pertenceA :Cofre_do_Tempo_Perdido ;
+    :refereEvento :Exploracao_Espacial ;
+    :titulo "Alias Grace" .
+
+:Livro_Temporal_048 a :LivroFiccional ;
+    :escritoPor :Autor_E ;
+    :existeEm :Linha_Epsilon_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Viagem_Intergalactica ;
+    :titulo "Ritos de Passagem" .
+
+:Livro_Temporal_049 a :LivroFiccional ;
+    :escritoPor :Autor_J ;
+    :existeEm :Linha_Delta_Alt ;
+    :pertenceA :Biblioteca_Infinita ;
+    :refereEvento :Viagem_Intergalactica ;
+    :titulo "A Máquina do Tempo III" .
+
+:Livro_Temporal_050 a :LivroParadoxal ;
+    :escritoPor :Autor_J ;
+    :existeEm :Linha_Alpha_0,
+        :Linha_Delta_Alt ;
+    :pertenceA :Torre_do_Conhecimento ;
+    :refereEvento :Dobra_Espacial,
+        :Pax_Romana ;
+    :titulo "A Ilha das Vozes" .
+
+:Ptolomeu_X a :Bibliotecario ;
+    :trabalhaEm :Biblioteca_Infinita .
+
+:Sibilina a :Bibliotecario ;
+    :trabalhaEm :Biblioteca_Central_do_Tempo .
+
+:Sofia a :Leitor ;
+    :requisita :Livro_Marte_2050 .
+
+:Tiago a :Leitor ;
+    :requisita :Livro_Os_Visitantes .
+
+:Zeno a :Bibliotecario ;
+    :trabalhaEm :Biblioteca_Infinita .
+
+:descricao a owl:DatatypeProperty ;
+    rdfs:domain :Evento ;
+    rdfs:range xsd:string .
+
+:designacao a owl:DatatypeProperty ;
+    rdfs:domain :Evento ;
+    rdfs:range xsd:string .
+
+:escritoPor a owl:ObjectProperty ;
+    rdfs:domain :Livro ;
+    rdfs:range :Autor .
+
+:nome a owl:DatatypeProperty ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:string .
+
+:paisOrigem a owl:DatatypeProperty ;
+    rdfs:domain :Autor ;
+    rdfs:range xsd:string .
+
+:pertenceA a owl:ObjectProperty ;
+    rdfs:domain :Livro ;
+    rdfs:range :Biblioteca .
+
+:titulo a owl:DatatypeProperty ;
+    rdfs:domain :Livro ;
+    rdfs:range xsd:string .
+
+:Agente a owl:Class .
+
+:Chegada_Marte :descricao "A aterragem bem-sucedida de sondas robóticas no planeta vermelho, iniciando a exploração in situ." ;
+    :designacao "Primeiro Rover em Marte" .
+
+:Cidades_Subaquaticas :descricao "A construção de metrópoles autossustentáveis sob o Oceano Atlântico devido à sobrepopulação." ;
+    :designacao "Urbanismo Oceânico" .
+
+:Colonizacao_de_Marte a :EventoFuturo ;
+    :descricao "O estabelecimento da primeira colónia humana auto-sustentável no planeta vermelho." ;
+    :designacao "Colonização de Marte" .
+
+:Descoberta_do_Fogo a :EventoHistorico ;
+    :descricao "Marco fundamental na evolução humana que permitiu a sobrevivência e o desenvolvimento tecnológico.",
+        "Momento crucial na evolução humana permitindo a proteção, culinária e aquecimento." ;
+    :designacao "Domínio do Fogo" .
+
+:Dominio_da_Energia_Livre a :EventoFuturo ;
+    :descricao "A estabilização da fusão nuclear fria, fornecendo energia limpa e ilimitada a todos." ;
+    :designacao "Domínio da Energia de Fusão Livre" .
+
+:Guerra_Fria :descricao "Estado de tensão política e militar entre os blocos liderados por EUA e URSS." ;
+    :designacao "Guerra Fria" .
+
+:Guerra_dos_Tres_Reinos a :EventoHistorico ;
+    :descricao "Conflito dinástico de grande escala que redefiniu as fronteiras e o poder na antiguidade.",
+        "Conflito histórico de sucessão e poder entre facções dinásticas rivais." ;
+    :designacao "Guerra dos Três Reinos" .
+
+:Invencao_Internet :descricao "O nascimento da rede global de comunicação por Tim Berners-Lee no CERN." ;
+    :designacao "Criação da World Wide Web" .
+
+:Leonardo a :Autor,
+        :Leitor ;
+    :nome "Leonardo da Vinci" ;
+    :paisOrigem "Itália" ;
+    :requisita :Livro_Tempo_Fragmentado .
+
+:Linha_T3 a :LinhaAlternativa .
+
+:Linha_T4 a :LinhaAlternativa .
+
+:Livro_Marte_2050 a :LivroFiccional ;
+    :escritoPor :Marco ;
+    :existeEm :Linha_T1 ;
+    :pertenceA :Biblioteca_Entre_Ontem_e_Amanha ;
+    :refereEvento :Colonizacao_de_Marte ;
+    :titulo "Marte 2050: A Nova Fronteira" .
+
+:Livro_Os_Visitantes a :LivroFiccional ;
+    :escritoPor :Leonardo ;
+    :existeEm :Linha_T2 ;
+    :pertenceA :Biblioteca_Entre_Ontem_e_Amanha ;
+    :refereEvento :Primeiro_Contato_Alienigena ;
+    :titulo "Os Visitantes do Espaço" .
+
+:Livro_Tempo_Fragmentado a :LivroParadoxal ;
+    :escritoPor :Cronos ;
+    :existeEm :Linha_T0,
+        :Linha_T1 ;
+    :pertenceA :Biblioteca_Entre_Ontem_e_Amanha ;
+    :titulo "Tempo Fragmentado" .
+
+:Primeiro_Contato_Alienigena a :EventoFuturo ;
+    :descricao "O momento histórico do primeiro encontro oficial entre a humanidade e uma civilização extraterrestre." ;
+    :designacao "Primeiro Contacto Alienígena" .
+
+:Primeiro_Voo a :EventoHistorico ;
+    :descricao "A conquista do céu por Santos-Dumont em 1906, iniciando a era da aviação moderna.",
+        "A primeira demonstração pública de um veículo mais pesado que o ar a descolar pelos seus próprios meios." ;
+    :designacao "O Voo do 14-bis" .
+
+:Queda_do_Imperio a :EventoHistorico ;
+    :descricao "O colapso do Império Romano do Ocidente em 476 d.C., marcando o fim da Idade Antiga.",
+        "O colapso do Império Romano do Ocidente em 476 d.C., marcando o início da Idade Média." ;
+    :designacao "Queda do Império Romano" .
+
+:Revolucao_Francesa :descricao "Período de profunda agitação social e política na França que derrubou a monarquia absolutista." ;
+    :designacao "Revolução Francesa" .
+
+:Tratado_Tordesilhas :descricao "Acordo de 1494 entre Portugal e Castela para dividir as terras descobertas fora da Europa." ;
+    :designacao "Tratado de Tordesilhas" .
+
+:trabalhaEm a owl:ObjectProperty ;
+    rdfs:domain :Bibliotecario ;
+    rdfs:range :Biblioteca .
+
+:Batalha_Aljubarrota :descricao "Conflito decisivo em 1385 entre o Reino de Portugal e Castela, garantindo a independência portuguesa." ;
+    :designacao "Batalha de Aljubarrota" .
+
+:Beatriz a :Autor ;
+    :nome "Beatriz Portinari" ;
+    :paisOrigem "Itália" .
+
+:Colonia_Lunar :descricao "A primeira base permanente de seres humanos na Lua, estabelecida no Mar da Tranquilidade." ;
+    :designacao "Fundação de Selene" .
+
+:Cura_Alzheimer :descricao "A descoberta da terapia genética que eliminou o Alzheimer da população global." ;
+    :designacao "Erradicação das Doenças Neurodegenerativas" .
+
+:Dobra_Espacial :descricao "A realização teórica e prática de viagens acima da velocidade da luz." ;
+    :designacao "Primeiro Voo de Dobra" .
+
+:Helena a :Autor ;
+    :nome "Helena de Troia" ;
+    :paisOrigem "Grécia" .
+
+:IA_Autoconsfiente a :EventoFuturo ;
+    :descricao "A integração de todas as redes de processamento numa única entidade autoconsciente." ;
+    :designacao "Consciência Sintética Universal" .
+
+:Linha_T2 a :LinhaAlternativa .
+
+:Marco a :Autor,
+        :Leitor ;
+    :nome "Marco Polo" ;
+    :paisOrigem "Itália" .
+
+:Peste_Negra :descricao "A pandemia mais devastadora da história humana, que assolou a Europa no século XIV." ;
+    :designacao "Peste Negra" .
+
+:Primeira_Cidade_Submarina a :EventoFuturo ;
+    :descricao "A abertura da primeira metrópole construída inteiramente sob o leito do Oceano Atlântico." ;
+    :designacao "Inauguração de Aquápolis" .
+
+:Primeiro_Contacto :descricao "O momento histórico em que a humanidade recebeu e descodificou um sinal de inteligência alienígena." ;
+    :designacao "Primeiro Contacto Extraterrestre" .
+
+:Renascimento a :EventoHistorico ;
+    :descricao "Movimento artístico e intelectual europeu marcado pelo redescobrimento da cultura clássica.",
+        "Movimento cultural, económico e político que marcou a transição da Idade Média para a Modernidade." ;
+    :designacao "Renascimento Cultural",
+        "Renascimento Europeu" .
+
+:Renascimento_Italiano :descricao "O florescimento das artes e ciências em Itália entre os séculos XIV e XVI." ;
+    :designacao "Renascimento Italiano" .
+
+:Singularidade_IA :descricao "O ponto em que a inteligência artificial ultrapassou a capacidade cognitiva humana combinada." ;
+    :designacao "A Singularidade Tecnológica" .
+
+:Singularidade_Tecnologica a :EventoFuturo ;
+    :descricao "Ponto teórico no futuro onde o crescimento tecnológico se torna incontrolável e irreversível." ;
+    :designacao "Singularidade Tecnológica" .
+
+:Transferencia_Consciencia :descricao "A tecnologia que permite transferir a consciência humana para suportes digitais." ;
+    :designacao "Upload Mental" .
+
+:refereEvento a owl:ObjectProperty ;
+    rdfs:domain :Livro ;
+    rdfs:range :Evento .
+
+:Autor_8 a :Autor ;
+    :nome "Jules Verne" ;
+    :paisOrigem "França" .
+
+:Autor_G a :Autor ;
+    :nome "Stanislaw Lem II" ;
+    :paisOrigem "Polónia" .
+
+:Contato_Sirius a :EventoFuturo ;
+    :descricao "Receção da primeira mensagem codificada vinda do sistema estelar de Sirius." ;
+    :designacao "O Contacto de Sirius" .
+
+:Cronos a :Autor,
+        :Bibliotecario ;
+    :nome "Cronos, o Guardião" ;
+    :paisOrigem "Grécia" ;
+    :trabalhaEm :Biblioteca_Entre_Ontem_e_Amanha .
+
+:Fim_da_Escassez a :EventoFuturo ;
+    :descricao "A era iniciada pela mineração de asteroides, tornando os materiais raros abundantes." ;
+    :designacao "O Fim da Escassez de Recursos" .
+
+:existeEm a owl:ObjectProperty ;
+    rdfs:domain :Livro ;
+    rdfs:range :LinhaTemporal .
+
+:Autor_1 a :Autor ;
+    :nome "Fernando Pessoa" ;
+    :paisOrigem "Portugal" .
+
+:Autor_10 a :Autor ;
+    :nome "Stanislaw Lem" ;
+    :paisOrigem "Polónia" .
+
+:Autor_3 a :Autor ;
+    :nome "George Orwell" ;
+    :paisOrigem "Reino Unido" .
+
+:Autor_6 a :Autor ;
+    :nome "Ursula K. Le Guin" ;
+    :paisOrigem "EUA" .
+
+:Autor_B a :Autor ;
+    :nome "Ursula K. Le Guin II" ;
+    :paisOrigem "EUA" .
+
+:Autor_C a :Autor ;
+    :nome "Philip K. Dick II" ;
+    :paisOrigem "EUA" .
+
+:Autor_D a :Autor ;
+    :nome "Jorge Luis Borges II" ;
+    :paisOrigem "Argentina" .
+
+:Autor_H a :Autor ;
+    :nome "Margaret Atwood II" ;
+    :paisOrigem "Canadá" .
+
+:Autor_I a :Autor ;
+    :nome "Arthur C. Clarke II" ;
+    :paisOrigem "Reino Unido" .
+
+:Cura_da_Mortalidade a :EventoFuturo ;
+    :descricao "Descoberta da terapia genética que permite travar o envelhecimento celular indefinidamente." ;
+    :designacao "Cura da Mortalidade Biológica" .
+
+:Exploracao_Espacial a :EventoHistorico ;
+    :descricao "O lançamento do Sputnik 1 e a subsequente corrida à Lua durante o século XX.",
+        "O lançamento do Sputnik 1, marcando o início da conquista humana do espaço." ;
+    :designacao "Início da Era Espacial" .
+
+:LinhaTemporal a owl:Class .
+
+:Linha_T1 a :LinhaAlternativa .
+
+:Nascimento_da_IA a :EventoFuturo ;
+    :descricao "O despertar da primeira consciência puramente digital e sintética." ;
+    :designacao "Nascimento da Inteligência Artificial Geral" .
+
+:Pessoa a owl:Class ;
+    rdfs:subClassOf :Agente .
+
+:Autor_4 a :Autor ;
+    :nome "Philip K. Dick" ;
+    :paisOrigem "EUA" .
+
+:Autor_5 a :Autor ;
+    :nome "Isaac Asimov" ;
+    :paisOrigem "Rússia" .
+
+:Crise_das_Tulipas a :EventoHistorico ;
+    :descricao "Considerada a primeira bolha especulativa financeira da história moderna.",
+        "Um dos primeiros registos de uma bolha especulativa financeira na Holanda do século XVII." ;
+    :designacao "Tulipomania",
+        "Tulipomania Holandesa" .
+
+:Descobrimento_da_America a :EventoHistorico ;
+    :descricao "A expedição de 1492 que estabeleceu o contacto permanente entre a Europa e as Américas.",
+        "A expedição de 1492 que iniciou o contacto permanente entre a Europa e as Américas." ;
+    :designacao "Chegada de Colombo à América" .
+
+:Evento a owl:Class .
+
+:Extincao_da_Fome a :EventoFuturo ;
+    :descricao "A implementação de sistemas de sintetização de alimentos que erradicou a escassez nutricional no planeta." ;
+    :designacao "Extinção da Fome Mundial" .
+
+:Linha_T0 a :LinhaOriginal .
+
+:Pax_Romana a :EventoHistorico ;
+    :descricao "Longo período de relativa paz e estabilidade no Império Romano sob o domínio de Augusto.",
+        "Longo período de relativa paz e estabilidade vivido pelo Império Romano." ;
+    :designacao "Paz Romana" .
+
+:Autor_7 a :Autor ;
+    :nome "H.G. Wells" ;
+    :paisOrigem "Reino Unido" .
+
+:Autor_F a :Autor ;
+    :nome "Italo Calvino II" ;
+    :paisOrigem "Itália" .
+
+:Autor_J a :Autor ;
+    :nome "H.G. Wells II" ;
+    :paisOrigem "Reino Unido" .
+
+:Crise_de_1929 a :EventoHistorico ;
+    :descricao "A maior recessão económica do século XX, iniciada com o colapso da bolsa de Nova Iorque.",
+        "O colapso da bolsa de valores de Nova Iorque que gerou uma crise económica mundial." ;
+    :designacao "A Grande Depressão" .
+
+:Extincao_Dino a :EventoHistorico ;
+    :descricao "Evento catastrófico provocado por um asteroide que extinguiu os dinossauros não-aviários.",
+        "O evento catastrófico que resultou na extinção dos dinossauros não-aviários." ;
+    :designacao "Extinção Cretáceo-Paleogeno" .
+
+:LinhaOriginal a owl:Class ;
+    rdfs:subClassOf :LinhaTemporal .
+
+:Queda_do_Muro a :EventoHistorico ;
+    :descricao "O desmantelamento do muro em 1989, simbolizando o fim da Guerra Fria.",
+        "O evento de 1989 que simbolizou o fim da Guerra Fria e a reunificação alemã." ;
+    :designacao "Queda do Muro de Berlim" .
+
+:Revolucao_Industrial a :EventoHistorico ;
+    :descricao "O período de transição para novos processos de fabrico na Europa e nos Estados Unidos.",
+        "Transição para novos processos de manufatura com base no vapor e mecanização." ;
+    :designacao "Primeira Revolução Industrial" .
+
+:Autor_A a :Autor ;
+    :nome "Isaac Asimov II" ;
+    :paisOrigem "Rússia" .
+
+:Linha_Alt_Omega a :LinhaAlternativa .
+
+:Nascimento_do_Sol a :EventoHistorico ;
+    :descricao "O colapso de uma nuvem molecular gigante que deu origem ao Sol há 4.6 mil milhões de anos.",
+        "O colapso de uma nuvem molecular que deu origem à nossa estrela há 4.6 mil milhões de anos." ;
+    :designacao "Formação do Sistema Solar" .
+
+:Autor_9 a :Autor ;
+    :nome "Arthur C. Clarke" ;
+    :paisOrigem "Reino Unido" .
+
+:Autor_E a :Autor ;
+    :nome "Octavia Butler II" ;
+    :paisOrigem "EUA" .
+
+:Explosao_Solar_2100 a :EventoFuturo ;
+    :descricao "Evento climático espacial extremo que redefiniu as infraestruturas eletrónicas da Terra." ;
+    :designacao "A Grande Explosão Solar de 2100" .
+
+:Livro a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :LinhaTemporal ;
+            owl:onProperty :existeEm ] .
+
+:Biblioteca a owl:Class .
+
+:Guerra_dos_Nanobots a :EventoFuturo ;
+    :descricao "Conflito global travado inteiramente através de máquinas microscópicas programáveis." ;
+    :designacao "A Guerra dos Nanobots" .
+
+:Linha_Gama_Alt a :LinhaAlternativa .
+
+:Viagem_Intergalactica a :EventoFuturo ;
+    :descricao "A travessia tripulada para além da Via Láctea através de um buraco de minhoca estabilizado." ;
+    :designacao "Primeira Viagem Intergaláctica" .
+
+:Autor_2 a :Autor ;
+    :nome "J.K. Rowling" ;
+    :paisOrigem "Reino Unido" .
+
+:Linha_Alt_Recursiva a :LinhaAlternativa .
+
+:Linha_Epsilon_Alt a :LinhaAlternativa .
+
+:Biblioteca_Entre_Ontem_e_Amanha a :Biblioteca .
+
+:LinhaAlternativa a owl:Class ;
+    rdfs:subClassOf :LinhaTemporal .
+
+:Bibliotecario a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Biblioteca ;
+            owl:onProperty :trabalhaEm ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        :Pessoa .
+
+:EventoFuturo a owl:Class ;
+    rdfs:subClassOf :Evento .
+
+:Linha_Delta_Alt a :LinhaAlternativa .
+
+:EventoHistorico a owl:Class ;
+    rdfs:subClassOf :Evento .
+
+:Linha_Original_Prime a :LinhaOriginal .
+
+:Linha_Alpha_0 a :LinhaOriginal .
+
+:Biblioteca_Infinita a :Biblioteca .
+
+:Linha_Original_00 a :LinhaOriginal .
+
+:Torre_do_Conhecimento a :Biblioteca .
+
+:Linha_Beta_0 a :LinhaOriginal .
+
+:Cofre_do_Tempo_Perdido a :Biblioteca .
+
+:Linha_Alt_A a :LinhaAlternativa .
+
+:Autor a owl:Class ;
+    rdfs:subClassOf :Pessoa .
+
+:Biblioteca_Central_do_Tempo a :Biblioteca .
+
+:Arquivo_do_Vazio_Temporal a :Biblioteca .
+
+:Leitor a owl:Class ;
+    rdfs:subClassOf :Pessoa .
+
+:LivroHistorico a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :EventoHistorico ;
+            owl:onProperty :refereEvento ],
+        :Livro ;
+    owl:disjointWith :LivroFiccional .
+
+:LivroFiccional a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:complementOf :EventoHistorico ] ;
+            owl:onProperty :refereEvento ],
+        :Livro .
+
+:LivroParadoxal a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :existeEm ;
+            owl:someValuesFrom :LinhaOriginal ],
+        [ a owl:Restriction ;
+            owl:onProperty :existeEm ;
+            owl:someValuesFrom :LinhaAlternativa ],
+        :Livro .
+
+
