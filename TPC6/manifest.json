@@ -1,0 +1,56 @@
+{
+    "authorName": "Rafael Santos Fernandes",
+    "authorId": "PG60298",
+    "authorPhoto": "../assets/img/foto.jpg",
+
+    "tpcNum": 6,
+    "title": "Semana 6",
+    "summary": "Este trabalho incidiu sobre a extensão da aplicação web desenvolvida no TPC5 para adicionar um meio de consulta da informação relativa a linhas temporais.",
+    "results": {
+        "Aplicação Web": [
+            {
+                "name": "Estrutura",
+                "desc": [
+                    "A estrutura da aplicação web mantém-se inalterada, salvo a adição do template da página `linha`:",
+                    "```",
+                    "web",
+                    "├── app",
+                    "│   ├── pages",
+                    "│   │   ├── app",
+                    "│   │   │   ├── linha.html.j2",
+                    "```"
+                ]
+            },
+            {
+                "name": "Alterações",
+                "desc": [
+                    "- Foi adicionada uma nova rota `/linha/<linha>` que obtém a informação relativa a uma linha temporal com o id `:<linha>`. A página apresenta uma lista com o id, título e tipos para todos os livros que existem nessa mesma linha temporal.",
+                    "- Foram organizados os macros utilizados nos templates, tendo sido movidos para o template `base` macros com uso nos templates `iterator` e `entry`, para evitar repetição de código e manter consistência visual na interface."
+                ]
+            },
+            {
+                "name": "Resultado",
+                "file": "./web",
+                "desc": [
+                    "Contém toda a nova versão aplicação web."
+                ]
+            }
+        ],
+        "Scripts de Utilitário": [
+            {
+                "name": "makeenv.py",
+                "file": "./web/makeenv.py",
+                "desc": [
+                    "Criado para fácilmente criar e ativar um *Virtual Environment* python para isolar as bibliotecas utilizadas pelo projeto."
+                ]
+            },
+            {
+                "name": "run.py",
+                "file": "./web/run.py",
+                "desc": [
+                    "Criado para fácilmente iniciar a aplicação web. Carrega automaticamente as variáveis de ambiente a partir do ficheiro `.env` localizado no mesmo diretório que o script, ou localizado no diretório de trabalho atual, caso o anterior esteja em falta."
+                ]
+            }
+        ]
+    }
+}

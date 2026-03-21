@@ -1,0 +1,45 @@
+{% macro maybeRDF(e) -%}
+    {% if (util.isinstance(e, util.types.RDFRef)) %}
+        <span class="rdfref" title="{{ e.uri }}">{{ e.short }}</span>  
+    {% else %}
+        {{ e }}
+    {% endif %}
+{%- endmacro %}
+
+{% macro solveAnchor(anchor, e) -%}
+    {% if (util.isinstance(anchor, util.types.str)) %}
+        {{ anchor }}
+    {% else %}
+        {{ anchor(e) }}
+    {% endif %}
+{%- endmacro %}
+
+{% macro maybeLink(val, anchor = None) -%}
+    {% if (anchor != None) %}
+        <a href="{{ solveAnchor(anchor, val) | trim }}">{{ maybeRDF(val) }}</a>
+    {% else %}
+        {{ maybeRDF(val) }}
+    {% endif %}
+{%- endmacro %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <nav class="main-nav">
+        <h1 class="title">RPCW 2026</h1>
+        <ul><a href="/livros">Livros</a></ul>
+        <ul><a href="/eventos">Eventos</a></ul>
+    </nav>
+    <section class="content">
+        {% block body %}
+        {% endblock body %}
+    </section>
+    <footer><p>RPCW2026 - Generated @ {{ data }}</p></footer>
+</body>
+</html>

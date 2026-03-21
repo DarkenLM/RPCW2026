@@ -1,0 +1,40 @@
+{% extends "base.html.j2" %}
+
+{# Process <td> elements that might be multiline. #}
+{% macro maybeListTD(val, anchor = None) -%}
+    <td>
+    {% if (util.isinstance(val, util.types.list)) %}
+        <div class="multiline">
+            {% for e in val %}
+                {{ maybeLink(e, anchor) }}
+            {% endfor %}
+            </div>
+    {% else %}
+        {{ maybeLink(val, anchor) }}
+    {% endif %}
+    </td>
+{%- endmacro %}
+
+{% block body %}
+<table class="iteratorTable">
+    <thead>
+        <tr>
+            {% for h in tableHeaders %}
+                <th>{{ h[1] }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for e in tableBody %}
+        <tr>
+            {% for h in tableHeaders %}
+                {% set el = e.get(h[0], "N/A") %} 
+                {% set _el_ltm = tableMeta.get("_linkTorwards", {}) %} 
+                {% set el_lt = e.get("_linkTorwards", _el_ltm.get(e.get("__id__", None), _el_ltm.get("*", None))) %}
+                {{ maybeListTD(el, el_lt['to'](e) if (el_lt != None and (h[0] in el_lt["from"])) else None) }}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock body %}

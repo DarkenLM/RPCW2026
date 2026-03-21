@@ -1,0 +1,51 @@
+{% extends "base.html.j2" %}
+
+{% block body %}
+<div class="card">
+    <h1 class="cardTitle">{{ entryName }}</h1>
+    <div class="cardBody">
+        {% for (k,e) in util.filter(util.filters.nonEmptyEntry, entryValues.items()) %} {# What the fuck, Jinja2. #}
+            <div class="cardCategory">
+                {% if (k != "_main") %}
+                    <h2 class="cardSubtitle">{{ util.pluralize(entryKeyMap.get(k, k)) }}</h2>
+                {% endif %}
+                {% set _mlt = entryMeta if (entryMeta is defined and entryMeta) else {} %} {# What the fuck, Jinja2. #}
+                {% set mlt = _mlt.get("_linkTorwards", {}) %} 
+                {% for (ek, ee) in e.items() %}
+                    {% if (util.isinstance(ee, util.types.list)) %} {# What the fuck, Jinja2. #}
+                        <div class="cardSubcategory">
+                            <table class="entryTable">
+                                <thead>
+                                    <tr><th>{{ util.pluralize(entryKeyMap.get(ek, ek), True) }}</th></tr>
+                                </thead>
+                                <tbody>
+                                    {% for eee in ee %}
+                                        {% set el_lt = mlt.get(ek, mlt.get("*", None)) %}
+                                        <tr><td>
+                                            {{ maybeLink(
+                                                eee, 
+                                                el_lt['to'](eee) if (el_lt != None and (eee in el_lt["from"])) else None
+                                            ) }}
+                                        </td></tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="cardSubcategory grid-1x2">
+                            <h3 class="cardSubcategoryTitle">{{ util.pluralize(entryKeyMap.get(ek, ek)) }}</h2>   
+                            {% set el_lt = mlt.get(ek, mlt.get("*", None)) %}
+                            <p>
+                                {{ maybeLink(
+                                    ee, 
+                                    el_lt['to'](ee) if (el_lt != None) else None
+                                ) }}
+                            </p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}
