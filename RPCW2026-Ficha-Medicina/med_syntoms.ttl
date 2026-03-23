@@ -1,0 +1,749 @@
+@prefix : <http://www.example.org/disease-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:AIDS a :Disease ;
+    :hasSymptom :extra_marital_contacts,
+        :high_fever,
+        :muscle_wasting,
+        :patches_in_throat .
+
+:Acne a :Disease ;
+    :hasSymptom :blackheads,
+        :pus_filled_pimples,
+        :scurring,
+        :skin_rash .
+
+:Alcoholic_hepatitis a :Disease ;
+    :hasSymptom :abdominal_pain,
+        :distention_of_abdomen,
+        :fluid_overload,
+        :history_of_alcohol_consumption,
+        :swelling_of_stomach,
+        :vomiting,
+        :yellowish_skin .
+
+:Allergy a :Disease ;
+    :hasSymptom :chills,
+        :continuous_sneezing,
+        :shivering,
+        :watering_from_eyes .
+
+:Arthritis a :Disease ;
+    :hasSymptom :movement_stiffness,
+        :muscle_weakness,
+        :painful_walking,
+        :stiff_neck,
+        :swelling_joints .
+
+:Bronchial_Asthma a :Disease ;
+    :hasSymptom :breathlessness,
+        :cough,
+        :family_history,
+        :fatigue,
+        :high_fever,
+        :mucoid_sputum .
+
+:Cervical_spondylosis a :Disease ;
+    :hasSymptom :back_pain,
+        :dizziness,
+        :loss_of_balance,
+        :neck_pain,
+        :weakness_in_limbs .
+
+:Chicken_pox a :Disease ;
+    :hasSymptom :fatigue,
+        :headache,
+        :high_fever,
+        :itching,
+        :lethargy,
+        :loss_of_appetite,
+        :malaise,
+        :mild_fever,
+        :red_spots_over_body,
+        :skin_rash,
+        :swelled_lymph_nodes .
+
+:Chronic_cholestasis a :Disease ;
+    :hasSymptom :abdominal_pain,
+        :itching,
+        :loss_of_appetite,
+        :nausea,
+        :vomiting,
+        :yellowing_of_eyes,
+        :yellowish_skin .
+
+:Common_Cold a :Disease ;
+    :hasSymptom :chest_pain,
+        :chills,
+        :congestion,
+        :continuous_sneezing,
+        :cough,
+        :fatigue,
+        :headache,
+        :high_fever,
+        :loss_of_smell,
+        :malaise,
+        :muscle_pain,
+        :phlegm,
+        :redness_of_eyes,
+        :runny_nose,
+        :sinus_pressure,
+        :swelled_lymph_nodes,
+        :throat_irritation .
+
+:Dengue a :Disease ;
+    :hasSymptom :back_pain,
+        :chills,
+        :fatigue,
+        :headache,
+        :high_fever,
+        :joint_pain,
+        :loss_of_appetite,
+        :malaise,
+        :muscle_pain,
+        :nausea,
+        :pain_behind_the_eyes,
+        :red_spots_over_body,
+        :skin_rash,
+        :vomiting .
+
+:Diabetes a :Disease ;
+    :hasSymptom :Fatigue,
+        :FrequentUrination,
+        :IncreasedThirst,
+        :blurred_and_distorted_vision,
+        :excessive_hunger,
+        :fatigue,
+        :increased_appetite,
+        :irregular_sugar_level,
+        :lethargy,
+        :obesity,
+        :polyuria,
+        :restlessness,
+        :weight_loss ;
+    :hasTreatment :DietModification,
+        :Exercise,
+        :InsulinTherapy .
+
+:Dimorphic_hemorrhoids_piles a :Disease ;
+    :hasSymptom :bloody_stool,
+        :constipation,
+        :irritation_in_anus,
+        :pain_during_bowel_movements,
+        :pain_in_anal_region .
+
+:Drug_Reaction a :Disease ;
+    :hasSymptom :burning_micturition,
+        :itching,
+        :skin_rash,
+        :spotting_urination,
+        :stomach_pain .
+
+:Flu a :Disease ;
+    :hasSymptom :Cough,
+        :Fever,
+        :SoreThroat ;
+    :hasTreatment :AntiviralDrugs,
+        :Hydration,
+        :Rest .
+
+:Fungal_infection a :Disease ;
+    :hasSymptom :dischromic_patches,
+        :itching,
+        :nodal_skin_eruptions,
+        :skin_rash .
+
+:GERD a :Disease ;
+    :hasSymptom :acidity,
+        :chest_pain,
+        :cough,
+        :stomach_pain,
+        :ulcers_on_tongue,
+        :vomiting .
+
+:Gastroenteritis a :Disease ;
+    :hasSymptom :dehydration,
+        :diarrhoea,
+        :sunken_eyes,
+        :vomiting .
+
+:Heart_attack a :Disease ;
+    :hasSymptom :breathlessness,
+        :chest_pain,
+        :sweating,
+        :vomiting .
+
+:Hepatitis_B a :Disease ;
+    :hasSymptom :abdominal_pain,
+        :dark_urine,
+        :fatigue,
+        :itching,
+        :lethargy,
+        :loss_of_appetite,
+        :malaise,
+        :receiving_blood_transfusion,
+        :receiving_unsterile_injections,
+        :yellow_urine,
+        :yellowing_of_eyes,
+        :yellowish_skin .
+
+:Hepatitis_C a :Disease ;
+    :hasSymptom :family_history,
+        :fatigue,
+        :loss_of_appetite,
+        :nausea,
+        :yellowing_of_eyes,
+        :yellowish_skin .
+
+:Hepatitis_D a :Disease ;
+    :hasSymptom :abdominal_pain,
+        :dark_urine,
+        :fatigue,
+        :joint_pain,
+        :loss_of_appetite,
+        :nausea,
+        :vomiting,
+        :yellowing_of_eyes,
+        :yellowish_skin .
+
+:Hepatitis_E a :Disease ;
+    :hasSymptom :abdominal_pain,
+        :acute_liver_failure,
+        :coma,
+        :dark_urine,
+        :fatigue,
+        :high_fever,
+        :joint_pain,
+        :loss_of_appetite,
+        :nausea,
+        :stomach_bleeding,
+        :vomiting,
+        :yellowing_of_eyes,
+        :yellowish_skin .
+
+:Hypertension a :Disease ;
+    :hasSymptom :chest_pain,
+        :dizziness,
+        :headache,
+        :lack_of_concentration,
+        :loss_of_balance .
+
+:Hyperthyroidism a :Disease ;
+    :hasSymptom :abnormal_menstruation,
+        :diarrhoea,
+        :excessive_hunger,
+        :fast_heart_rate,
+        :fatigue,
+        :irritability,
+        :mood_swings,
+        :muscle_weakness,
+        :restlessness,
+        :sweating,
+        :weight_loss .
+
+:Hypoglycemia a :Disease ;
+    :hasSymptom :anxiety,
+        :blurred_and_distorted_vision,
+        :drying_and_tingling_lips,
+        :excessive_hunger,
+        :fatigue,
+        :headache,
+        :irritability,
+        :nausea,
+        :palpitations,
+        :slurred_speech,
+        :sweating,
+        :vomiting .
+
+:Hypothyroidism a :Disease ;
+    :hasSymptom :abnormal_menstruation,
+        :brittle_nails,
+        :cold_hands_and_feets,
+        :depression,
+        :dizziness,
+        :enlarged_thyroid,
+        :fatigue,
+        :irritability,
+        :lethargy,
+        :mood_swings,
+        :puffy_face_and_eyes,
+        :swollen_extremeties,
+        :weight_gain .
+
+:Impetigo a :Disease ;
+    :hasSymptom :blister,
+        :high_fever,
+        :red_sore_around_nose,
+        :skin_rash,
+        :yellow_crust_ooze .
+
+:Jaundice a :Disease ;
+    :hasSymptom :abdominal_pain,
+        :dark_urine,
+        :fatigue,
+        :high_fever,
+        :itching,
+        :vomiting,
+        :weight_loss,
+        :yellowish_skin .
+
+:Malaria a :Disease ;
+    :hasSymptom :chills,
+        :diarrhoea,
+        :headache,
+        :high_fever,
+        :muscle_pain,
+        :nausea,
+        :sweating,
+        :vomiting .
+
+:Migraine a :Disease ;
+    :hasSymptom :acidity,
+        :blurred_and_distorted_vision,
+        :depression,
+        :excessive_hunger,
+        :headache,
+        :indigestion,
+        :irritability,
+        :stiff_neck,
+        :visual_disturbances .
+
+:Ontology a owl:Ontology .
+
+:Osteoarthristis a :Disease ;
+    :hasSymptom :hip_joint_pain,
+        :joint_pain,
+        :knee_pain,
+        :neck_pain,
+        :painful_walking,
+        :swelling_joints .
+
+:Paralysis__brain_hemorrhage a :Disease ;
+    :hasSymptom :altered_sensorium,
+        :headache,
+        :vomiting,
+        :weakness_of_one_body_side .
+
+:Patient1 a :Patient ;
+    :exhibitsSymptom :Cough,
+        :Fever,
+        :SoreThroat ;
+    :name "Paul Harrods" .
+
+:Patient2 a :Patient ;
+    :exhibitsSymptom :Fatigue,
+        :FrequentUrination,
+        :IncreasedThirst ;
+    :name "Ana Montana" .
+
+:Peptic_ulcer_diseae a :Disease ;
+    :hasSymptom :abdominal_pain,
+        :indigestion,
+        :internal_itching,
+        :loss_of_appetite,
+        :passage_of_gases,
+        :vomiting .
+
+:Pneumonia a :Disease ;
+    :hasSymptom :breathlessness,
+        :chest_pain,
+        :chills,
+        :cough,
+        :fast_heart_rate,
+        :fatigue,
+        :high_fever,
+        :malaise,
+        :phlegm,
+        :rusty_sputum,
+        :sweating .
+
+:Psoriasis a :Disease ;
+    :hasSymptom :inflammatory_nails,
+        :joint_pain,
+        :silver_like_dusting,
+        :skin_peeling,
+        :skin_rash,
+        :small_dents_in_nails .
+
+:Tuberculosis a :Disease ;
+    :hasSymptom :blood_in_sputum,
+        :breathlessness,
+        :chest_pain,
+        :chills,
+        :cough,
+        :fatigue,
+        :high_fever,
+        :loss_of_appetite,
+        :malaise,
+        :mild_fever,
+        :phlegm,
+        :sweating,
+        :swelled_lymph_nodes,
+        :vomiting,
+        :weight_loss,
+        :yellowing_of_eyes .
+
+:Typhoid a :Disease ;
+    :hasSymptom :abdominal_pain,
+        :belly_pain,
+        :chills,
+        :constipation,
+        :diarrhoea,
+        :fatigue,
+        :headache,
+        :high_fever,
+        :nausea,
+        :toxic_look__typhos,
+        :vomiting .
+
+:Urinary_tract_infection a :Disease ;
+    :hasSymptom :bladder_discomfort,
+        :burning_micturition,
+        :continuous_feel_of_urine,
+        :foul_smell_of_urine .
+
+:Varicose_veins a :Disease ;
+    :hasSymptom :bruising,
+        :cramps,
+        :fatigue,
+        :obesity,
+        :prominent_veins_on_calf,
+        :swollen_blood_vessels,
+        :swollen_legs .
+
+:_vertigo_Paroymsal__Positional_Vertigo a :Disease ;
+    :hasSymptom :headache,
+        :loss_of_balance,
+        :nausea,
+        :spinning_movements,
+        :unsteadiness,
+        :vomiting .
+
+:exhibitsSymptom a owl:ObjectProperty ;
+    rdfs:domain :Patient ;
+    rdfs:range :Symptom .
+
+:hasDisease a owl:ObjectProperty ;
+    rdfs:domain :Patient ;
+    rdfs:range :Disease .
+
+:hasSymptom a owl:ObjectProperty ;
+    rdfs:domain :Disease ;
+    rdfs:range :Symptom .
+
+:hasTreatment a owl:ObjectProperty ;
+    rdfs:domain :Disease ;
+    rdfs:range :Treatment .
+
+:hepatitis_A a :Disease ;
+    :hasSymptom :abdominal_pain,
+        :dark_urine,
+        :diarrhoea,
+        :joint_pain,
+        :loss_of_appetite,
+        :mild_fever,
+        :muscle_pain,
+        :nausea,
+        :vomiting,
+        :yellowing_of_eyes,
+        :yellowish_skin .
+
+:receivesTreatment a owl:ObjectProperty ;
+    rdfs:domain :Patient ;
+    rdfs:range :Treatment .
+
+:AntiviralDrugs a :Treatment .
+
+:DietModification a :Treatment .
+
+:Exercise a :Treatment .
+
+:Hydration a :Treatment .
+
+:InsulinTherapy a :Treatment .
+
+:Rest a :Treatment .
+
+:acute_liver_failure a :Symptom .
+
+:altered_sensorium a :Symptom .
+
+:anxiety a :Symptom .
+
+:belly_pain a :Symptom .
+
+:blackheads a :Symptom .
+
+:bladder_discomfort a :Symptom .
+
+:blister a :Symptom .
+
+:blood_in_sputum a :Symptom .
+
+:bloody_stool a :Symptom .
+
+:brittle_nails a :Symptom .
+
+:bruising a :Symptom .
+
+:cold_hands_and_feets a :Symptom .
+
+:coma a :Symptom .
+
+:congestion a :Symptom .
+
+:continuous_feel_of_urine a :Symptom .
+
+:cramps a :Symptom .
+
+:dehydration a :Symptom .
+
+:dischromic_patches a :Symptom .
+
+:distention_of_abdomen a :Symptom .
+
+:drying_and_tingling_lips a :Symptom .
+
+:enlarged_thyroid a :Symptom .
+
+:extra_marital_contacts a :Symptom .
+
+:fluid_overload a :Symptom .
+
+:foul_smell_of_urine a :Symptom .
+
+:hip_joint_pain a :Symptom .
+
+:history_of_alcohol_consumption a :Symptom .
+
+:increased_appetite a :Symptom .
+
+:inflammatory_nails a :Symptom .
+
+:internal_itching a :Symptom .
+
+:irregular_sugar_level a :Symptom .
+
+:irritation_in_anus a :Symptom .
+
+:knee_pain a :Symptom .
+
+:lack_of_concentration a :Symptom .
+
+:loss_of_smell a :Symptom .
+
+:movement_stiffness a :Symptom .
+
+:mucoid_sputum a :Symptom .
+
+:muscle_wasting a :Symptom .
+
+:nodal_skin_eruptions a :Symptom .
+
+:pain_behind_the_eyes a :Symptom .
+
+:pain_during_bowel_movements a :Symptom .
+
+:pain_in_anal_region a :Symptom .
+
+:palpitations a :Symptom .
+
+:passage_of_gases a :Symptom .
+
+:patches_in_throat a :Symptom .
+
+:polyuria a :Symptom .
+
+:prominent_veins_on_calf a :Symptom .
+
+:puffy_face_and_eyes a :Symptom .
+
+:pus_filled_pimples a :Symptom .
+
+:receiving_blood_transfusion a :Symptom .
+
+:receiving_unsterile_injections a :Symptom .
+
+:red_sore_around_nose a :Symptom .
+
+:redness_of_eyes a :Symptom .
+
+:runny_nose a :Symptom .
+
+:rusty_sputum a :Symptom .
+
+:scurring a :Symptom .
+
+:shivering a :Symptom .
+
+:silver_like_dusting a :Symptom .
+
+:sinus_pressure a :Symptom .
+
+:skin_peeling a :Symptom .
+
+:slurred_speech a :Symptom .
+
+:small_dents_in_nails a :Symptom .
+
+:spinning_movements a :Symptom .
+
+:spotting_urination a :Symptom .
+
+:stomach_bleeding a :Symptom .
+
+:sunken_eyes a :Symptom .
+
+:swelling_of_stomach a :Symptom .
+
+:swollen_blood_vessels a :Symptom .
+
+:swollen_extremeties a :Symptom .
+
+:swollen_legs a :Symptom .
+
+:throat_irritation a :Symptom .
+
+:toxic_look__typhos a :Symptom .
+
+:ulcers_on_tongue a :Symptom .
+
+:unsteadiness a :Symptom .
+
+:visual_disturbances a :Symptom .
+
+:watering_from_eyes a :Symptom .
+
+:weakness_in_limbs a :Symptom .
+
+:weakness_of_one_body_side a :Symptom .
+
+:weight_gain a :Symptom .
+
+:yellow_crust_ooze a :Symptom .
+
+:yellow_urine a :Symptom .
+
+:Cough a :Symptom .
+
+:Fatigue a :Symptom .
+
+:Fever a :Symptom .
+
+:FrequentUrination a :Symptom .
+
+:IncreasedThirst a :Symptom .
+
+:SoreThroat a :Symptom .
+
+:abnormal_menstruation a :Symptom .
+
+:acidity a :Symptom .
+
+:back_pain a :Symptom .
+
+:burning_micturition a :Symptom .
+
+:constipation a :Symptom .
+
+:continuous_sneezing a :Symptom .
+
+:depression a :Symptom .
+
+:family_history a :Symptom .
+
+:fast_heart_rate a :Symptom .
+
+:indigestion a :Symptom .
+
+:mood_swings a :Symptom .
+
+:muscle_weakness a :Symptom .
+
+:neck_pain a :Symptom .
+
+:obesity a :Symptom .
+
+:painful_walking a :Symptom .
+
+:red_spots_over_body a :Symptom .
+
+:restlessness a :Symptom .
+
+:stiff_neck a :Symptom .
+
+:stomach_pain a :Symptom .
+
+:swelling_joints a :Symptom .
+
+:blurred_and_distorted_vision a :Symptom .
+
+:dizziness a :Symptom .
+
+:loss_of_balance a :Symptom .
+
+:mild_fever a :Symptom .
+
+:phlegm a :Symptom .
+
+:swelled_lymph_nodes a :Symptom .
+
+:breathlessness a :Symptom .
+
+:excessive_hunger a :Symptom .
+
+:irritability a :Symptom .
+
+:lethargy a :Symptom .
+
+:muscle_pain a :Symptom .
+
+:weight_loss a :Symptom .
+
+:Patient a owl:Class .
+
+:cough a :Symptom .
+
+:dark_urine a :Symptom .
+
+:diarrhoea a :Symptom .
+
+:chest_pain a :Symptom .
+
+:itching a :Symptom .
+
+:joint_pain a :Symptom .
+
+:malaise a :Symptom .
+
+:sweating a :Symptom .
+
+:chills a :Symptom .
+
+:skin_rash a :Symptom .
+
+:yellowing_of_eyes a :Symptom .
+
+:Treatment a owl:Class .
+
+:yellowish_skin a :Symptom .
+
+:abdominal_pain a :Symptom .
+
+:headache a :Symptom .
+
+:loss_of_appetite a :Symptom .
+
+:nausea a :Symptom .
+
+:high_fever a :Symptom .
+
+:fatigue a :Symptom .
+
+:vomiting a :Symptom .
+
+:Disease a owl:Class .
+
+:Symptom a owl:Class .
+

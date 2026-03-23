@@ -1,0 +1,103 @@
+## Quantas doenças estão presentes na ontologia?
+```
+PREFIX : <http://www.example.org/disease-ontology#>
+SELECT (COUNT (DISTINCT ?d) AS ?total) WHERE {
+    ?d a :Disease
+}
+```
+
+## Que doenças estão associadas ao sintoma "yellowish_skin"?
+```
+PREFIX : <http://www.example.org/disease-ontology#>
+SELECT ?d WHERE {
+    ?d a :Disease .
+    ?d :hasSymptom :yellowish_skin
+}
+```
+
+## Que doenças estão associadas ao tratamento "exercise"?
+```
+PREFIX : <http://www.example.org/disease-ontology#>
+SELECT ?d WHERE {
+    ?d a :Disease .
+    ?d :hasTreatment :Exercise
+}
+```
+
+## Produz uma lista ordenada alfabeticamente com o nome dos doentes.
+```
+PREFIX : <http://www.example.org/disease-ontology#>
+SELECT ?patientName WHERE {
+    ?patient a :Patient .
+    ?patient :name ?patientName
+}
+ORDER BY ?patientName
+```
+
+## Cria uma query CONSTRUCT que diagnostique a doença de cada pessoa, ou seja, produza uma lista de triplos com a forma :patientX :hasDisease :diseaseY. No fim, acrescenta estes triplos à ontologia;
+```
+PREFIX : <http://www.example.org/disease-ontology#>
+CONSTRUCT {
+    ?patient :hasDisease ?disease
+} WHERE {
+    ?patient a :Patient .
+    ?disease a :Disease .
+    ?patient :exhibitsSymptom ?s .
+    ?disease :hasSymptom ?s
+    
+    FILTER NOT EXISTS {
+        ?disease :hasSymptom ?symptom .
+        FILTER NOT EXISTS {
+            ?patient :exhibitsSymptom ?symptom .
+        }
+    }
+}
+ORDER BY ?patient
+```
+
+## Cria um query SPARQL que poduza uma distribuição dos doentes pelas doenças, ou seja, dá como resultado uma lista de pares (doença, nº de doentes);
+```
+PREFIX : <http://www.example.org/disease-ontology#>
+SELECT ?disease (COUNT(?p) AS ?numPatients) WHERE {
+    ?disease a :Disease .
+    ?p :hasDisease ?disease .
+}
+GROUP BY ?disease
+ORDER BY ?disease
+```
+
+## Cria um query SPARQL que poduza uma distribuição das doenças pelos sintomas, ou seja, dá como resultado uma lista de pares (sintoma, nº de doenças com o sintoma);
+```
+PREFIX : <http://www.example.org/disease-ontology#>
+SELECT ?symptom (COUNT(?d) AS ?numDiseases) WHERE {
+    ?d a :Disease .
+    ?symptom a :Symptom .
+    ?d :hasSymptom ?symptom .
+}
+GROUP BY ?symptom
+ORDER BY ?symptom
+```
+
+## Cria um query SPARQL que poduza uma distribuição das doenças pelos tratamentos, ou seja, dá como resultado uma lista de pares (tratamento, nº de doenças com o tratamento);
+```
+PREFIX : <http://www.example.org/disease-ontology#>
+SELECT ?treatment (COUNT(?d) AS ?numDiseases) WHERE {
+    ?d a :Disease .
+    ?treatment a :Treatment .
+    ?d :hasTreatment ?treatment .
+}
+GROUP BY ?treatment
+ORDER BY ?treatment
+```
+
+## Cria um query SPARQL que poduza uma lista das doenças e respetivos sintomas, ou seja, dá como resultado uma lista de pares (doença, lista de sintomas).
+```
+PREFIX : <http://www.example.org/disease-ontology#>
+SELECT ?disease ?symptom WHERE {
+    ?disease a :Disease .
+    ?symptom a :Symptom .
+    ?disease :hasSymptom ?symptom .
+}
+ORDER BY ?disease
+```
+
