@@ -107,7 +107,7 @@ def main():
             diff = new - existing
             for s in diff: 
                 g.add((PREFIX[s], r.RDF.type, PREFIX["Treatment"]))
-                # g.add((PREFIX[trueKey], PREFIX["hasTreatment"], PREFIX[s]))
+                g.add((PREFIX[trueKey], PREFIX["hasTreatment"], PREFIX[s]))
 
         if (not args.dryrun):
             ontoOut = g.serialize(format=args.format)
