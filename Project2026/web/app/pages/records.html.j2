@@ -1,0 +1,27 @@
+{% extends "templates/navigatable.html.j2" %}
+
+{% block _header %}
+    {% block title %}{{ appName }}{% endblock title %}
+{% endblock _header %}
+
+{% block header %}
+    {{ super() }}
+    {# <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/root.css') }}"> #}
+    <style>
+        .contentBody {
+            display: grid;
+            grid-template-rows: 1fr auto;
+        }
+    </style>
+{% endblock header %}
+
+{% block content %}
+    <TableList headers="['ID', 'Title', 'Autor', 'Temas', 'Emitido em']">
+        <template slot="body">
+            {% for r in records %}
+                <TableElement columns="{{ util.types.list(r.values()) }}"></TableElement>
+            {% endfor %}
+        </template>
+    </TableList>
+    <Paginator currentPage="{{ currentPage }}" minPage="1" maxPage="{{ maxPage }}"></Paginator>
+{% endblock content %}

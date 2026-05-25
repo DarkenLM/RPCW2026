@@ -1,0 +1,90 @@
+{% extends "templates/navigatable.html.j2" %}
+
+{% block _header %}
+    {% block title %}{{ appName }}{% endblock title %}
+{% endblock _header %}
+
+{% block header %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/root.css') }}">
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            height: 100%;
+            gap: 16px;
+        }
+
+        .queryEditor {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            gap: 8px;
+
+            textarea {
+                height: 100%;
+                width: 100%;
+                resize: none;
+            }
+        }
+
+        button {
+            padding: 5px !important;
+            color: var(--text-600);
+            font-weight: bold;
+            background: var(--primary-300);
+            border: var(--secondary-500) solid 2px;
+            border-radius: 8px;
+
+            &:not(:disabled) {
+                cursor: context-menu;
+                
+                &:hover {
+                    font-weight: bolder;
+                    color: var(--text-800);
+                    background: var(--primary-500);
+                }
+            }
+
+            &:disabled {
+                filter: grayscale(1);
+            }
+        }
+
+        .queryResults {
+            background-color: var(--secondary-700);
+
+            td {
+                word-break: break-word;
+            }
+        }
+    </style>
+{% endblock header %}
+
+{% block content %}
+    <div class="container">
+        <div class="queryEditor">
+            <textarea name="queryEditor" id="queryEditor"></textarea>
+            <div class="controls">
+                <button id="submitQueryBtn">Executar</button> (CTRL + L)
+            </div>
+        </div>
+        <div class="queryResults" id="queryResults">
+        </div>
+    </div>
+
+    {# Only here for their stylesheets to be imported. #}
+    <div id="REMOVE">
+        <TableList>
+            <template slot="body">
+                <TableElement columns="[0,0,0]"></TableElement>
+            </template>
+        </TableList>
+    </div>
+{% endblock content %}
+
+{% block tail %}
+<script type="module" src="{{ url_for('static', filename='js/pages/queries.js') }}"></script>
+{% endblock tail %}

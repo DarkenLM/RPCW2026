@@ -1,0 +1,255 @@
+@prefix : <http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#> .
+
+<http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#contributedTo
+:contributedTo rdf:type owl:ObjectProperty ;
+               owl:inverseOf :contributionBy ;
+               rdfs:domain :Person ;
+               rdfs:range :Record .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#contributionBy
+:contributionBy rdf:type owl:ObjectProperty ;
+                rdfs:domain :Record ;
+                rdfs:range :Person .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#created
+:created rdf:type owl:ObjectProperty ;
+         owl:inverseOf :createdBy ;
+         rdfs:domain :Person ;
+         rdfs:range :Record .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#createdBy
+:createdBy rdf:type owl:ObjectProperty ;
+           rdfs:domain :Record ;
+           rdfs:range :Person .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#hasOriginal
+:hasOriginal rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isOriginalOf ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :Record ;
+             rdfs:range :Original .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#hasSubject
+:hasSubject rdf:type owl:ObjectProperty ;
+            owl:inverseOf :subjectOf ;
+            rdfs:domain :Record ;
+            rdfs:range :Subject .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#hasThumbnail
+:hasThumbnail rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isThumbnailOf ;
+              rdfs:domain :Record ;
+              rdfs:range :Thumbnail .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#isOriginalOf
+:isOriginalOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#isThumbnailOf
+:isThumbnailOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#subjectOf
+:subjectOf rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#accessionedDate
+:accessionedDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Record ;
+                 rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#availableDate
+:availableDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Record ;
+               rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Original ,
+                         :Record ,
+                         :Thumbnail ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#format
+:format rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Original ,
+                    :Record ,
+                    :Thumbnail ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#grade
+:grade rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Record ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#issuedDate
+:issuedDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Record ;
+            rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#language
+:language rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Record ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Original
+                                  :Thumbnail
+                                  :Person
+                                )
+                  ] ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#originalName
+:originalName rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :Original
+                                          :Thumbnail
+                                        )
+                          ] ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#rights
+:rights rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Record ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#rightsURI
+:rightsURI rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Record ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#submittedDate
+:submittedDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Record ;
+               rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#tid
+:tid rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Record ;
+     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#title
+:title rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Record ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#type
+:type rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Record ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#uri
+:uri rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Record ;
+     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#url
+:url rdf:type owl:DatatypeProperty ;
+     rdfs:domain [ rdf:type owl:Class ;
+                   owl:unionOf ( :Original
+                                 :Thumbnail
+                               )
+                 ] ;
+     rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#Contributor
+:Contributor rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :Person
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :contributedTo ;
+                                                          owl:someValuesFrom :Record
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#Creator
+:Creator rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :Person
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :created ;
+                                                      owl:someValuesFrom :Record
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#Original
+:Original rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#Person
+:Person rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#Record
+:Record rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#Subject
+:Subject rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/duartearaujo/ontologies/2026/RepositoriUM#Thumbnail
+:Thumbnail rdf:type owl:Class .
+
+###@@@People@@@
+
+###@@@Subjects@@@
+
+###@@@Records@@@
+
+###@@@Originals@@@
+
+###@@@Thumbnails@@@
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

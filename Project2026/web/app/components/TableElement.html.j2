@@ -1,0 +1,45 @@
+{# def columns #}
+{% from "macro/util.html.j2" import maybeLink with context %}
+
+<style>
+    td {
+        position: relative;
+        padding: 8px;
+        font-weight: bold;
+
+        &:not(:first-child) {
+            border-left: 1px solid var(--secondary-400);
+        }
+    }
+
+    .multiline {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    ul {
+        padding: 0 1rem;
+    }
+</style>
+
+<tr>
+    {% for el in columns %}
+        <td>
+            {% if (util.islist(el)) %}
+                {% if util.len(el) > 0 %}
+                    <ul>
+                    {% for sel in el %}
+                        <li>
+                            {{ maybeLink(sel) }}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                    N/A
+                {% endif %}
+            {% else %}
+                {{ maybeLink(el) }}
+            {% endif %}
+        </td>
+    {% endfor %}
+</tr>

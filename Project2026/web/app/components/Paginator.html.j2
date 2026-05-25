@@ -1,0 +1,53 @@
+{# def currentPage=1, minPage=1, maxPage=1 #}
+{% from "macro/util.html.j2" import maybeLink with context %}
+
+<style>
+    .paginator {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .paginatorBtn {
+        padding: 1rem;
+        text-decoration: none;
+        color: var(--text-300);
+
+        &:is(a):hover {
+            cursor: pointer;
+        }
+
+        &.active {
+            color: var(--text-100);
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("paginatorBtn")) {
+            e.preventDefault();
+            const link = e.target.getAttribute("data-link");
+            if (link == null) return;
+
+            const search = new URLSearchParams(document.location.search);
+            search.set("page", link);
+            document.location.replace(`${document.location.origin}${document.location.pathname}?${search.toString()}`)
+        }
+    })
+</script>
+
+<div class="paginator">
+    <a class="paginatorBtn" data-link="{{ util.max(currentPage - 1, minPage) }}">«</a>
+    {% for i in util.range(util.min(currentPage - minPage, 4), 0, -1) %}
+        <a class="paginatorBtn" data-link="{{ currentPage - i }}">{{ currentPage - i }}</a>
+    {% endfor %}
+    <div class="paginatorBtn active">{{ currentPage }}</div>
+    {% for i in util.range(1, util.min(maxPage - currentPage + 1, 5)) %}
+        <a class="paginatorBtn" data-link="{{ currentPage + i }}">{{ currentPage + i }}</a>
+    {% endfor %}
+    <a class="paginatorBtn" data-link="{{ util.min(currentPage + 1, maxPage) }}">»</a>
+</div>

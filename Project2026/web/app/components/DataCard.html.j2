@@ -1,0 +1,212 @@
+{# def title, subtitle="", elements=[], highlights=[], thumbnail={} #}
+{% from "macro/util.html.j2" import mapStr, maybeLink with context %}
+
+<style>
+    :root {
+        --card-left: 2rem;
+    }
+
+    .dataCard {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        height: 100%;
+        background-color: var(--primary-500);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .dataCardHeader {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        min-height: 0;
+        background-color: var(--primary-600);
+        padding-left: var(--card-left);
+        gap: 16px;
+    }
+
+    .dataCardTitle {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--primary-600);
+        padding: 1.33rem;
+        padding-left: 0;
+        gap: 16px;
+    }
+
+    .dataCardThumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+    }
+
+    .dataCardSubtitle {
+        color: var(--text-200);
+        text-decoration: none;
+
+        &:hover {
+            color: var(--text-100);
+            text-decoration: underline;
+        }
+    }
+
+    .dataCardContent {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        min-height: 0;
+        overflow-y: auto;
+        background-color: var(--secondary-700);
+        padding: 1rem;
+        margin-left: var(--card-left);
+    }
+
+    .dataCardHighlights {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 16px;
+        max-height: 30vh;
+        overflow-y: auto;
+    }
+
+    .dataCardHighlight {
+        width: fit-content;
+        padding: 0.5rem 1rem;
+        background-color: var(--secondary-800);
+        color: var(--text-100);
+        border-radius: 6px;
+
+        &:is(a) {
+            text-decoration: none;
+
+            &:hover {
+                background-color: var(--secondary-500);
+                color: var(--text-900);
+            }
+        }
+    }
+
+    .dataCardDescriptor {
+        display: flex;
+        flex-direction: column;
+
+        &.dataCardInline {
+            flex-direction: row;
+            align-items: center;
+            gap: 0.33rem;
+        }
+
+        .dataCardDescriptorTitle {
+            color: var(--text-300);
+        }
+    }
+
+
+    .dataCardLink {
+        color: var(--text-400);
+        text-decoration: none;
+
+        &:hover {
+            color: var(--text-200);
+            text-decoration: underline;
+        }
+    }
+
+    ul {
+        padding: 0 2rem;
+    }
+</style>
+
+{% macro maybeInline(el) -%}
+    {% if (util.isdict(el)) %}
+        {{ 'dataCardInline' if el.get('inline', None) else '' }}
+    {% endif %}
+{%- endmacro %}
+
+{% macro elementFile(file) -%}
+    <div class="dataCardContent">
+        {% for fk in file %}
+                {% set fel = file[fk] %}
+                <div class="dataCardDescriptor {{ maybeInline(fel) }}">
+                    <h4 class="dataCardDescriptorTitle" title="{{ fk }}">{{ mapStr(fk) }}</h4>
+                    <div class="dataCardDescriptorValue">
+                        {{ elementValue(fel, "dataCardLink") }}
+                    </div>
+                </div>
+            {% endfor %}
+    </div>
+{%- endmacro %}
+
+{% macro elementValue(el, cls="") -%}
+    {% if (util.isdict(el)) %}
+        {% if (el["type"] == "lockicon") %}
+            <LockIcon variant="{{ el['value'] }}"></LockIcon>
+        {% elif (el["type"] == "link") %}
+            {{ maybeLink(el, cls) }}
+        {% elif (el["type"] == "file") %}
+            {{ elementFile(util.replaceInObj(
+                el["value"], 
+                size={ "type": "filesize", "value": el["value"]["size"] },
+                url={ "type": "link", "link": el["value"]["url"] },
+            )) }}
+        {% elif (el["type"] == "filesize") %}
+            {% if (el["value"]) %}
+                <span title="{{ el['value'] }} bytes">{{ (util.types.float(el['value']) / 1024.0).__round__(2) }} MB</span>
+            {% else %}
+                <span>N/A</span>
+            {% endif %}
+        {% elif (el["type"] == "collection") %}
+            {{ elementFile(util.pickFromObjAllExcept(el, "type")) }}
+        {% else %}
+            {{ el['value'] }}
+        {% endif %}
+    {% elif (util.islist(el)) %}
+        {% if (util.len(el) == 0) %}
+            N/A
+        {% else %}
+            <ul>
+            {% for sel in el %}
+                <li>{{ elementValue(sel, cls) }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% else %}
+        {{ maybeLink(el, cls) }}
+    {% endif %}
+{%- endmacro %}
+
+<div class="dataCard">
+    <div class="dataCardHeader">
+        <div class="dataCardTitle">
+            <h1>{{ title }}</h1>
+            {% if title %}<h3>{{ maybeLink(subtitle, "dataCardSubtitle") }}</h3>{% endif %}
+            {% if (highlights != None) %}
+                <div class="dataCardHighlights">
+                    {% for hl in highlights %}
+                        {{ maybeLink(hl, "dataCardHighlight", "dataCardHighlight") }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        {% if thumbnail != None %}
+            <div class="dataCardThumb">
+                <img src="{{ thumbnail.get('value', {}).url }}" alt="{{ thumbnail.get('value', {}).description }}">
+            </div>
+        {% endif %}
+    </div>
+    <div class="dataCardContent">
+        {% if (elements != None) %}
+            {% for elk in elements %}
+                {% set el = elements[elk] %}
+                <div class="dataCardDescriptor {{ maybeInline(el) }}">
+                    <h4 class="dataCardDescriptorTitle" title="{{ elk }}">{{ mapStr(elk) }}</h4>
+                    <div class="dataCardDescriptorValue">
+                        {{ elementValue(el, "dataCardLink") }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>

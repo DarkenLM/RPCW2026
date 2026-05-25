@@ -1,0 +1,20 @@
+{% extends "templates/navigatable.html.j2" %}
+
+{% block _header %}
+    {% block title %}{{ appName }}{% endblock title %}
+{% endblock _header %}
+
+{% block header %}
+    {{ super() }}
+    {# <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/root.css') }}"> #}
+{% endblock header %}
+
+{% block content %}
+    <DataCard 
+        title="{{ record['title'] }}" 
+        subtitle="{{ record['uri'] }}"
+        highlights="{{ highlights }}"
+        elements="{{ record }}"
+        thumbnail="{{ record['thumbnail'] }}"
+    ></DataCard>
+{% endblock content %}

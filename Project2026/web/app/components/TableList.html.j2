@@ -1,0 +1,89 @@
+{# def headers=[] #}
+{% from "macro/util.html.j2" import mapStr with context %}
+
+<style>
+    table {
+        position: relative;
+        width: 100%;
+        border-spacing: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 0;
+
+        a {
+            text-decoration: none;
+            font-size: large;
+            font-weight: bold;
+            word-break: break-word;
+            color: var(--text);
+
+            &:hover {
+                color: var(--text-hover);
+            }
+        }
+
+        thead {
+            display: block;
+            width: 100%;
+            flex-shrink: 0;
+            background: var(--primary-400);
+
+            tr {
+                display: table;
+                width: 100%;
+                table-layout: fixed;
+            }
+            
+            th {
+                padding: 8px;
+            }
+        }
+
+        tbody {
+            display: block;    /* makes overflow-y work */
+            overflow-y: auto;
+            flex: 1 1 0;
+            min-height: 0;
+
+            tr {
+                display: table;
+                width: 100%;
+                table-layout: fixed;
+
+                &:nth-child(even) {
+                    background: var(--secondary-700);
+                    &:hover {
+                        background: var(--secondary-800);
+                    }
+                    
+                    --text: var(--text-100);
+                    --text-hover: var(--text-200);
+                }
+
+                &:nth-child(odd) {
+                    background: var(--secondary-500);
+                    &:hover {
+                        background: var(--secondary-600);
+                    }
+
+                    --text: var(--text-200);
+                    --text-hover: var(--text-300);
+                }
+            }
+        }
+    }
+</style>
+
+<table class="lockIcon" title="{{ "Open Access" if (variant == "openAccess") else "Closed Access" }}">
+    <thead>
+        <tr>
+            {% for h in headers %}
+                <th>{{ mapStr(h) }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        <slot name="body"></slot>
+    </tbody>
+</table>

@@ -1,0 +1,19 @@
+{% extends "templates/base.html.j2" %}
+
+{% block _header %}
+    {% block title %}{{ appName }} - Acerca de{% endblock title %}
+{% endblock _header %}
+
+{% block header %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/about.css') }}">
+{% endblock header %}
+
+{% block body %}
+    <h1>Equipa de Desenvolvimento</h1>
+    <ul>
+        <li><h3>Duarte Araújo, pg58806</h3></li>
+        <li><h3>Rafael Fernandes, pg60298</h3></li>
+    </ul>
+
+    <h3>Desenvolvido no âmbito do Projeto de Reconhecimento e Processamento de Conhecimento na Web do Mestrado em Engenharia Informática da Universidade do Minho</h3>
+{% endblock body %}

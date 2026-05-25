@@ -1,0 +1,6 @@
+{
+    "basedpyright.analysis.diagnosticMode": "openFilesOnly",
+    "basedpyright.analysis.typeCheckingMode": "recommended",
+    "basedpyright.importStrategy": "useBundled",
+    "python.languageServer": "None"
+}

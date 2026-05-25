@@ -1,0 +1,46 @@
+{# def variant="open", size="bx-sm" #}
+{# 
+ # Available sizes:
+ # - bx-xs
+ # - bx-sm
+ # - bx-md
+ # - bx-lg
+ # - bx-xl
+ #}
+
+<style>
+    @media (prefers-color-scheme: light) {
+        :root {
+            --lockicon-open: #00b100;
+            --lockicon-closed: #eb0000;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --lockicon-open: #006a00;
+            --lockicon-closed: #aa0000;
+        }
+    }
+
+    :global(:root[data-theme="light"]) {
+        --lockicon-open: #00b100;
+        --lockicon-closed: #eb0000;
+    }
+    :global(:root[data-theme="dark"]) {
+        --lockicon-open: #006a00;
+        --lockicon-closed: #aa0000;
+    }
+
+    .lockIcon {
+        display: flex;
+        align-items: center;
+    }
+</style>
+
+<div class="lockIcon" title="{{ "Open Access" if (variant == "openAccess") else "Closed Access" }}">
+    {% if variant == "openAccess" %}
+        <i class="bx {{ size }} bx-lock-keyhole-open-alt" style="color: var(--lockicon-open);"></i>
+    {% else %}
+        <i class="bx {{ size }} bx-lock-keyhole" style="color: var(--lockicon-closed);"></i>
+    {% endif %}
+</div>

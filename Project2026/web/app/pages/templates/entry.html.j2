@@ -1,0 +1,37 @@
+{% extends "base.html.j2" %}
+
+{% block body %}
+<div class="card">
+    <h1 class="cardTitle">{{ entryName }}</h1>
+    <div class="cardBody">
+        {% for (k,e) in entryValues.items() %}
+            <div class="cardCategory">
+                {% if (k != "_main") %}
+                    <h2 class="cardSubtitle">{{ util.pluralize(entryKeyMap.get(k, k)) }}</h2>
+                {% endif %}
+                {% for (ek, ee) in e.items() %}
+                    {% if (util.isinstance(ee, util.types.list)) %} {# What the fuck, Jinja2. #}
+                        <div class="cardSubcategory">
+                            <table class="entryTable">
+                                <thead>
+                                    <tr><th>{{ util.pluralize(entryKeyMap.get(ek, ek), True) }}</th></tr>
+                                </thead>
+                                <tbody>
+                                    {% for eee in ee %}
+                                        <tr><td>{{ maybeRDF(eee) }}</td></tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="cardSubcategory grid-1x2">
+                            <h3 class="cardSubcategoryTitle">{{ util.pluralize(entryKeyMap.get(ek, ek)) }}</h2>   
+                            <p>{{ maybeRDF(ee) }}</p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}

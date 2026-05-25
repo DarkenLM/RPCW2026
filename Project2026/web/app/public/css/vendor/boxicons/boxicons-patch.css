@@ -1,0 +1,28 @@
+.bx-xs {
+    font-size: 1rem !important
+}
+
+.bx-sm {
+    font-size: 1.55rem !important
+}
+
+.bx-md {
+    font-size: 2.25rem !important
+}
+
+.bx-lg {
+    font-size: 3.0rem !important
+}
+
+.bx-xl {
+    font-size: 3.5rem !important
+}
+
+.bx-fw {
+    font-size: 1.2857142857em;
+    line-height: .8em;
+    width: 1.2857142857em;
+    height: .8em;
+    margin-top: -.2em !important;
+    vertical-align: middle
+}

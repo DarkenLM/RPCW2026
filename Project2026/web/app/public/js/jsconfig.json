@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES6",
+    "lib": ["DOM", "ESNext"],
+    "checkJs": true,
+    "strict": true
+  },
+  "exclude": ["vendor"]
+}

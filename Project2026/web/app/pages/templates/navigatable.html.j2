@@ -1,0 +1,42 @@
+{% extends "templates/base.html.j2" %}
+
+{% block header %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor/boxicons/boxicons.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor/boxicons/boxicons-filled.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor/boxicons/boxicons-patch.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/navigatable.css') }}">
+{% endblock header %}
+
+{% block body %}
+  <div class="contentNavGrid">
+    <div class="contentNav">
+      <div class="contentNavElem">
+        <div class="searchContainer">
+          <input id="searchBar" type="text" class="searchBar" placeholder="Pesquisar"></input>
+          <button id="searchBtn" class="searchBtn">
+            <i class="bx bx-search"></i>
+          </button>
+        </div>
+      </div>
+      <hr>
+      <a class="contentNavElem" href="/pessoas">
+        <i class="bx bx-group"></i> Pessoas
+      </a>
+      <a class="contentNavElem" href="/registos">
+        <i class="bx bx-clipboard-detail"></i> Registos
+      </a>
+      <a class="contentNavElem" href="/categorias">
+        <i class="bx bx-categories"></i> Categorias
+      </a>
+    </div>
+    <div class="contentBody">
+      {% block content %}
+      
+      {% endblock content %}
+    </div>
+  </div>
+{% endblock body %}
+
+{% block tail %}
+<script type="module" src="{{ url_for('static', filename='js/navigatable.js') }}"></script>
+{% endblock tail %}

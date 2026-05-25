@@ -1,0 +1,11 @@
+{% macro mapStr(k) -%}
+    {{ util.pluralize(string_map__.get(k, k)) }}
+{%- endmacro %}
+
+{% macro maybeLink(el, linkCls="", regCls="") -%}
+    {% if util.isdict(el) and "link" in el %}
+        <a class="{{ linkCls }}" href="{{ el.link }}">{{ el.value or el.link }}</a>
+    {% else %}
+        <div class="{{ regCls }}">{{ el }}</div>
+    {% endif %}
+{%- endmacro %}

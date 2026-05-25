@@ -1,0 +1,12 @@
+.content h1 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.content li > h3 {
+    margin: 0;
+}
+
+.content ul {
+    margin: 0;
+}
